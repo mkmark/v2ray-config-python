@@ -1,0 +1,9 @@
+{
+  "python.defaultInterpreterPath": "./env/bin/python",
+  "jupyter.notebookFileRoot": "${workspaceFolder}",
+  "python.analysis.exclude": [
+    "env",
+    "archive",
+    "out"
+  ],
+}
