@@ -7,4 +7,4 @@ from typing import Optional
 
 @dataclass(slots=True)
 class FakeDNSServer:
-    fake_dns_engine: Optional[FakeDNSEngine] = field(default_factory=FakeDNSEngine)
+    fakeDNSEngine: Optional[FakeDNSEngine] = field(default_factory=FakeDNSEngine)

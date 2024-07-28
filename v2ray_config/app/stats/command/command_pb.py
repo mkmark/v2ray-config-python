@@ -7,7 +7,7 @@ from typing import Optional
 @dataclass(slots=True)
 class GetStatsRequest:
     name: Optional[str] = None
-    reset_: Optional[bool] = None
+    reset: Optional[bool] = None
 
 
 @dataclass(slots=True)
@@ -24,7 +24,7 @@ class GetStatsResponse:
 @dataclass(slots=True)
 class QueryStatsRequest:
     pattern: Optional[str] = None
-    reset_: Optional[bool] = None
+    reset: Optional[bool] = None
     patterns: Optional[list[str]] = field(default_factory=list[str])
     regexp: Optional[bool] = None
 
@@ -41,15 +41,15 @@ class SysStatsRequest:
 
 @dataclass(slots=True)
 class SysStatsResponse:
-    num_goroutine: Optional[int] = None
-    num_gc: Optional[int] = None
+    numGoroutine: Optional[int] = None
+    numGC: Optional[int] = None
     alloc: Optional[int] = None
-    total_alloc: Optional[int] = None
+    totalAlloc: Optional[int] = None
     sys: Optional[int] = None
     mallocs: Optional[int] = None
     frees: Optional[int] = None
-    live_objects: Optional[int] = None
-    pause_total_ns: Optional[int] = None
+    liveObjects: Optional[int] = None
+    pauseTotalNs: Optional[int] = None
     uptime: Optional[int] = None
 
 

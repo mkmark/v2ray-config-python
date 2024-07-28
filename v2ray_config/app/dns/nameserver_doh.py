@@ -17,7 +17,7 @@ class DoHNameServer(RWMutex):
     ips: Optional[dict[str, record]] = field(default_factory=dict[str, record])
     pub: Optional[Service] = field(default_factory=Service)
     cleanup: Optional[Periodic] = field(default_factory=Periodic)
-    req_id: Optional[int] = None
-    http_client: Optional[Client] = field(default_factory=Client)
-    doh_url: Optional[str] = None
+    reqID: Optional[int] = None
+    httpClient: Optional[Client] = field(default_factory=Client)
+    dohURL: Optional[str] = None
     name: Optional[str] = None

@@ -1,6 +1,5 @@
 # %%
 import re
-from pydantic.alias_generators import to_snake
 
 
 def extract_go_struct_types(go_code) -> list[tuple[str, str]]:
@@ -141,6 +140,10 @@ def go2py(go_code: str):
             else:
                 found = False
                 for i in range(2, len_go_field_elements):
+                    if go_field_elements[i].startswith("json:"):
+                        found = True
+                        go_field_name = go_field_elements[i][6:-2].split(",")[0]
+                        break
                     if go_field_elements[i].startswith("`json:"):
                         found = True
                         go_field_name = go_field_elements[i][7:-2].split(",")[0]
@@ -152,7 +155,7 @@ def go2py(go_code: str):
                 continue
 
             if go_field_name is not None:
-                py_field_name = to_snake(go_field_name)
+                py_field_name = go_field_name[0].lower() + go_field_name[1:]
                 py_field_name = escape_python_preserved_keyword(py_field_name)
                 go_field_type = go_field_elements[1]
                 py_field_type = go2py_field_type(go_field_type)
@@ -234,6 +237,8 @@ def go2py_field_type(go_field_type: str):
         "cfgcommon.NetworkList": "list[str]",
         "Port": "int",
         "net.Port": "int",
+        "PacketAddrType": "str",
+        "IPOrDomain": "str",
     }
     py_field_type = type_mapping.get(go_field_type, go_field_type)
     return py_field_type
@@ -273,6 +278,15 @@ type ServerConfig struct {
 
 type DeterministicDice struct {
 	*rand.Rand
+}
+type RootConfig struct {
+	LogConfig    json.RawMessage            `json:"log"`
+	DNSConfig    json.RawMessage            `json:"dns"`
+	RouterConfig json.RawMessage            `json:"router"`
+	Inbounds     []InboundConfig            `json:"inbounds"`
+	Outbounds    []OutboundConfig           `json:"outbounds"`
+	Services     map[string]json.RawMessage `json:"services"`
+	Extensions   []json.RawMessage          `json:"extension"`
 }
 
 """

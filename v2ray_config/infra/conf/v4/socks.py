@@ -20,7 +20,7 @@ class SocksServerConfig:
     udp: Optional[bool] = None
     ip: Optional[str] = None
     timeout: Optional[int] = None
-    user_level: Optional[int] = None
+    userLevel: Optional[int] = None
 
 
 @dataclass(slots=True)

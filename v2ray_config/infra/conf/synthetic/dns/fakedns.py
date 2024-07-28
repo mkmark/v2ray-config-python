@@ -6,8 +6,8 @@ from typing import Optional
 
 @dataclass(slots=True)
 class FakeDNSPoolElementConfig:
-    ip_pool: Optional[str] = None
-    pool_size: Optional[int] = None
+    ipPool: Optional[str] = None
+    poolSize: Optional[int] = None
 
 
 @dataclass(slots=True)

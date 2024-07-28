@@ -1,7 +1,7 @@
 from pydantic.dataclasses import dataclass, Field as field
 from typing import Optional
 
-from v2ray_config.common.net.packetaddr.config_pb import PacketAddrType
+# from v2ray_config.common.net.packetaddr.config_pb import PacketAddrType
 from v2ray_config.common.protocol.server_spec_pb import ServerEndpoint
 from v2ray_config.common.protocol.user_pb import User
 
@@ -32,7 +32,7 @@ class ClientConfig:
 class ServerConfig:
     users: Optional[list[User]] = field(default_factory=list[User])
     fallbacks: Optional[list[Fallback]] = field(default_factory=list[Fallback])
-    packet_encoding: Optional[PacketAddrType] = field(default_factory=PacketAddrType)
+    packet_encoding: Optional[str] = None
 
 
 @dataclass(slots=True)

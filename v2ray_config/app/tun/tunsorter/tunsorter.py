@@ -12,15 +12,15 @@ from typing import Optional
 
 @dataclass(slots=True)
 class TunSorter:
-    tun_writer: Optional[Writer] = field(default_factory=Writer)
+    tunWriter: Optional[Writer] = field(default_factory=Writer)
     dispatcher: Optional[Dispatcher] = field(default_factory=Dispatcher)
-    packet_addr_type: Optional[PacketAddrType] = field(default_factory=PacketAddrType)
-    tracked_connections: Optional[Map] = field(default_factory=Map)
+    packetAddrType: Optional[PacketAddrType] = field(default_factory=PacketAddrType)
+    trackedConnections: Optional[Map] = field(default_factory=Map)
     ctx: Optional[Context] = field(default_factory=Context)
 
 
 @dataclass(slots=True)
 class trackedUDPConnection:
-    packet_dispatcher: Optional[DispatcherI] = field(default_factory=DispatcherI)
-    tun_sorter: Optional[TunSorter] = field(default_factory=TunSorter)
+    packetDispatcher: Optional[DispatcherI] = field(default_factory=DispatcherI)
+    tunSorter: Optional[TunSorter] = field(default_factory=TunSorter)
     src: Optional[Destination] = field(default_factory=Destination)

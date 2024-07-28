@@ -16,13 +16,13 @@ from typing import Optional
 # import v2ray_config.transport.internet.udp as udp
 
 
-# @dataclass(slots=True)
-# class Client:
-#     config: Optional[ClientConfig] = field(default_factory=ClientConfig)
-#     ctx: Optional[Context] = field(default_factory=Context)
+@dataclass(slots=True)
+class Client:
+    config: Optional[ClientConfig] = field(default_factory=ClientConfig)
+    ctx: Optional[Context] = field(default_factory=Context)
 
 
-# @dataclass(slots=True)
-# class ClientUDPConnState:
-#     session: Optional[ClientUDPSession] = field(default_factory=ClientUDPSession)
-#     init_once: Optional[Once] = field(default_factory=Once)
+@dataclass(slots=True)
+class ClientUDPConnState:
+    session: Optional[ClientUDPSession] = field(default_factory=ClientUDPSession)
+    initOnce: Optional[Once] = field(default_factory=Once)

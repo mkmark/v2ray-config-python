@@ -14,15 +14,15 @@ class fakeDNSExtraOpts(int):
 
 @dataclass(slots=True)
 class fakeDNSSniffResult:
-    domain_name: Optional[str] = None
+    domainName: Optional[str] = None
 
 
 @dataclass(slots=True)
 class ipAddressInRangeOpt:
-    address_in_range: Optional[bool] = None
+    addressInRange: Optional[bool] = None
 
 
 @dataclass(slots=True)
 class DNSThenOthersSniffResult:
-    domain_name: Optional[str] = None
-    protocol_original_name: Optional[str] = None
+    domainName: Optional[str] = None
+    protocolOriginalName: Optional[str] = None

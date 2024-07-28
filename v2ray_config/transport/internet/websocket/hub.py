@@ -13,8 +13,8 @@ from typing import Optional
 class requestHandler:
     path: Optional[str] = None
     ln: Optional[Listener] = field(default_factory=Listener)
-    early_data_enabled: Optional[bool] = None
-    early_data_header_name: Optional[str] = None
+    earlyDataEnabled: Optional[bool] = None
+    earlyDataHeaderName: Optional[str] = None
 
 
 @dataclass(slots=True)
@@ -22,4 +22,4 @@ class Listener(Mutex):
     server: Optional[Server] = field(default_factory=Server)
     listener: Optional[Listener] = field(default_factory=Listener)
     config: Optional[Config] = field(default_factory=Config)
-    add_conn: Optional[ConnHandler] = field(default_factory=ConnHandler)
+    addConn: Optional[ConnHandler] = field(default_factory=ConnHandler)

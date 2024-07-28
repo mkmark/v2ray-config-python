@@ -11,7 +11,7 @@ from typing import Optional
 @dataclass(slots=True)
 class Manager:
     access: Optional[RWMutex] = field(default_factory=RWMutex)
-    default_handler: Optional[Handler] = field(default_factory=Handler)
-    tagged_handler: Optional[dict[str, Handler]] = field(default_factory=dict[str, Handler])
-    untagged_handlers: Optional[list[Handler]] = field(default_factory=list[Handler])
+    defaultHandler: Optional[Handler] = field(default_factory=Handler)
+    taggedHandler: Optional[dict[str, Handler]] = field(default_factory=dict[str, Handler])
+    untaggedHandlers: Optional[list[Handler]] = field(default_factory=list[Handler])
     running: Optional[bool] = None

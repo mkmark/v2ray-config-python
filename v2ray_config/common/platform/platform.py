@@ -5,4 +5,4 @@ from typing import Optional
 @dataclass(slots=True)
 class EnvFlag:
     name: Optional[str] = None
-    alt_name: Optional[str] = None
+    altName: Optional[str] = None

@@ -10,8 +10,8 @@ from typing import Optional
 class connection:
     conn: Optional[Conn] = field(default_factory=Conn)
     reader: Optional[Reader] = field(default_factory=Reader)
-    remote_addr: Optional[Addr] = field(default_factory=Addr)
-    should_wait: Optional[bool] = None
-    delayed_dial_finish: Optional[Context] = field(default_factory=Context)
-    finished_dial: Optional[CancelFunc] = field(default_factory=CancelFunc)
+    remoteAddr: Optional[Addr] = field(default_factory=Addr)
+    shouldWait: Optional[bool] = None
+    delayedDialFinish: Optional[Context] = field(default_factory=Context)
+    finishedDial: Optional[CancelFunc] = field(default_factory=CancelFunc)
     dialer: Optional[DelayedDialer] = field(default_factory=DelayedDialer)

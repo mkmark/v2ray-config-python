@@ -22,4 +22,4 @@ class Server:
 class ServerWorker:
     dispatcher: Optional[Dispatcher] = field(default_factory=Dispatcher)
     link: Optional[Link] = field(default_factory=Link)
-    session_manager: Optional[SessionManager] = field(default_factory=SessionManager)
+    sessionManager: Optional[SessionManager] = field(default_factory=SessionManager)

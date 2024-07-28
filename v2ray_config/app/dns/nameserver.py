@@ -14,11 +14,11 @@ from typing import Optional
 @dataclass(slots=True)
 class Client:
     server: Optional[Server] = field(default_factory=Server)
-    client_ip: Optional[IP] = field(default_factory=IP)
+    clientIP: Optional[IP] = field(default_factory=IP)
     tag: Optional[str] = None
-    query_strategy: Optional[IPOption] = field(default_factory=IPOption)
-    cache_strategy: Optional[CacheStrategy] = field(default_factory=CacheStrategy)
-    fallback_strategy: Optional[FallbackStrategy] = field(default_factory=FallbackStrategy)
+    queryStrategy: Optional[IPOption] = field(default_factory=IPOption)
+    cacheStrategy: Optional[CacheStrategy] = field(default_factory=CacheStrategy)
+    fallbackStrategy: Optional[FallbackStrategy] = field(default_factory=FallbackStrategy)
     domains: Optional[list[str]] = field(default_factory=list[str])
-    expect_i_ps: Optional[list[GeoIPMatcher]] = field(default_factory=list[GeoIPMatcher])
-    fake_dns: Optional[Server] = field(default_factory=Server)
+    expectIPs: Optional[list[GeoIPMatcher]] = field(default_factory=list[GeoIPMatcher])
+    fakeDNS: Optional[Server] = field(default_factory=Server)

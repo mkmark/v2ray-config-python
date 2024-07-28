@@ -8,4 +8,4 @@ from typing import Optional
 @dataclass(slots=True)
 class packetAddrDevice(Device):
     sorter: Optional[TunSorter] = field(default_factory=TunSorter)
-    secondary_dispatcher: Optional[NetworkDispatcher] = field(default_factory=NetworkDispatcher)
+    secondaryDispatcher: Optional[NetworkDispatcher] = field(default_factory=NetworkDispatcher)

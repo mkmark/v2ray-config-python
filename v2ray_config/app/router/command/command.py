@@ -9,7 +9,7 @@ from typing import Optional
 @dataclass(slots=True)
 class routingServer:
     router: Optional[Router] = field(default_factory=Router)
-    routing_stats: Optional[Channel] = field(default_factory=Channel)
+    routingStats: Optional[Channel] = field(default_factory=Channel)
 
 
 @dataclass(slots=True)

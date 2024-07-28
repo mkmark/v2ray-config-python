@@ -12,12 +12,12 @@ from typing import Optional
 @dataclass(slots=True)
 class dialerWithEarlyData:
     dialer: Optional[Dialer] = field(default_factory=Dialer)
-    uri_base: Optional[str] = None
+    uriBase: Optional[str] = None
     config: Optional[Config] = field(default_factory=Config)
 
 
 @dataclass(slots=True)
 class dialerWithEarlyDataRelayed:
     forwarder: Optional[BrowserForwarder] = field(default_factory=BrowserForwarder)
-    uri_base: Optional[str] = None
+    uriBase: Optional[str] = None
     config: Optional[Config] = field(default_factory=Config)

@@ -15,22 +15,22 @@ class BytesGenerator(func() []byte):
 
 @dataclass(slots=True)
 class AEADAuthenticator(AEAD):
-    nonce_generator: Optional[BytesGenerator] = field(default_factory=BytesGenerator)
-    additional_data_generator: Optional[BytesGenerator] = field(default_factory=BytesGenerator)
+    nonceGenerator: Optional[BytesGenerator] = field(default_factory=BytesGenerator)
+    additionalDataGenerator: Optional[BytesGenerator] = field(default_factory=BytesGenerator)
 
 
 @dataclass(slots=True)
 class AuthenticationReader:
     auth: Optional[Authenticator] = field(default_factory=Authenticator)
     reader: Optional[BufferedReader] = field(default_factory=BufferedReader)
-    size_parser: Optional[ChunkSizeDecoder] = field(default_factory=ChunkSizeDecoder)
-    size_bytes: Optional[list[int]] = field(default_factory=list[int])
-    transfer_type: Optional[TransferType] = field(default_factory=TransferType)
+    sizeParser: Optional[ChunkSizeDecoder] = field(default_factory=ChunkSizeDecoder)
+    sizeBytes: Optional[list[int]] = field(default_factory=list[int])
+    transferType: Optional[TransferType] = field(default_factory=TransferType)
     padding: Optional[PaddingLengthGenerator] = field(default_factory=PaddingLengthGenerator)
     size: Optional[int] = None
-    size_offset: Optional[int] = None
-    padding_len: Optional[int] = None
-    has_size: Optional[bool] = None
+    sizeOffset: Optional[int] = None
+    paddingLen: Optional[int] = None
+    hasSize: Optional[bool] = None
     done: Optional[bool] = None
 
 
@@ -38,6 +38,6 @@ class AuthenticationReader:
 class AuthenticationWriter:
     auth: Optional[Authenticator] = field(default_factory=Authenticator)
     writer: Optional[Writer] = field(default_factory=Writer)
-    size_parser: Optional[ChunkSizeEncoder] = field(default_factory=ChunkSizeEncoder)
-    transfer_type: Optional[TransferType] = field(default_factory=TransferType)
+    sizeParser: Optional[ChunkSizeEncoder] = field(default_factory=ChunkSizeEncoder)
+    transferType: Optional[TransferType] = field(default_factory=TransferType)
     padding: Optional[PaddingLengthGenerator] = field(default_factory=PaddingLengthGenerator)

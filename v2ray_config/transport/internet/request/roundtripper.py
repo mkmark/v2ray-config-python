@@ -7,7 +7,7 @@ from typing import Optional
 @dataclass(slots=True)
 class Request:
     data: Optional[list[int]] = field(default_factory=list[int])
-    connection_tag: Optional[list[int]] = field(default_factory=list[int])
+    connectionTag: Optional[list[int]] = field(default_factory=list[int])
 
 
 @dataclass(slots=True)

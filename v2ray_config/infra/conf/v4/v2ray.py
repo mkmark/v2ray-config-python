@@ -52,21 +52,21 @@ class InboundDetourConfig:
     allocate: Optional[InboundDetourAllocationConfig] = field(
         default_factory=InboundDetourAllocationConfig
     )
-    stream_settings: Optional[StreamConfig] = field(default_factory=StreamConfig)
-    domain_override: Optional[list[str]] = field(default_factory=list[str])
+    streamSettings: Optional[StreamConfig] = field(default_factory=StreamConfig)
+    domainOverride: Optional[list[str]] = field(default_factory=list[str])
     sniffing: Optional[SniffingConfig] = field(default_factory=SniffingConfig)
 
 
 @dataclass(slots=True)
 class OutboundDetourConfig:
     protocol: Optional[str] = None
-    send_through: Optional[str] = None
+    sendThrough: Optional[str] = None
     tag: Optional[str] = None
     settings: Optional[dict] = field(default_factory=dict)
-    stream_settings: Optional[StreamConfig] = field(default_factory=StreamConfig)
-    proxy_settings: Optional[ProxyConfig] = field(default_factory=ProxyConfig)
+    streamSettings: Optional[StreamConfig] = field(default_factory=StreamConfig)
+    proxySettings: Optional[ProxyConfig] = field(default_factory=ProxyConfig)
     mux: Optional[MuxConfig] = field(default_factory=MuxConfig)
-    domain_strategy: Optional[str] = None
+    domainStrategy: Optional[str] = None
 
 
 @dataclass(slots=True)
@@ -81,10 +81,10 @@ class Config:
     outbound: Optional[OutboundDetourConfig] = field(
         default_factory=OutboundDetourConfig
     )
-    inbound_detour: Optional[list[InboundDetourConfig]] = field(
+    inboundDetour: Optional[list[InboundDetourConfig]] = field(
         default_factory=list[InboundDetourConfig]
     )
-    outbound_detour: Optional[list[OutboundDetourConfig]] = field(
+    outboundDetour: Optional[list[OutboundDetourConfig]] = field(
         default_factory=list[OutboundDetourConfig]
     )
     log: Optional[LogConfig] = field(default_factory=LogConfig)
@@ -101,15 +101,15 @@ class Config:
     api: Optional[APIConfig] = field(default_factory=APIConfig)
     stats: Optional[StatsConfig] = field(default_factory=StatsConfig)
     reverse: Optional[ReverseConfig] = field(default_factory=ReverseConfig)
-    fake_dns: Optional[FakeDNSConfig] = field(default_factory=FakeDNSConfig)
-    browser_forwarder: Optional[BrowserForwarderConfig] = field(
+    fakeDns: Optional[FakeDNSConfig] = field(default_factory=FakeDNSConfig)
+    browserForwarder: Optional[BrowserForwarderConfig] = field(
         default_factory=BrowserForwarderConfig
     )
     observatory: Optional[ObservatoryConfig] = field(default_factory=ObservatoryConfig)
-    burst_observatory: Optional[BurstObservatoryConfig] = field(
+    burstObservatory: Optional[BurstObservatoryConfig] = field(
         default_factory=BurstObservatoryConfig
     )
-    multi_observatory: Optional[MultiObservatoryConfig] = field(
+    multiObservatory: Optional[MultiObservatoryConfig] = field(
         default_factory=MultiObservatoryConfig
     )
     services: Optional[dict[str, dict]] = field(default_factory=dict[str, dict])

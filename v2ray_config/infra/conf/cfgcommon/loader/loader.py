@@ -10,5 +10,5 @@ class ConfigCreatorCache(dict[str, ConfigCreator]):
 @dataclass(slots=True)
 class JSONConfigLoader:
     cache: Optional[ConfigCreatorCache] = field(default_factory=ConfigCreatorCache)
-    id_key: Optional[str] = None
-    config_key: Optional[str] = None
+    idKey: Optional[str] = None
+    configKey: Optional[str] = None

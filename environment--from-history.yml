@@ -1,0 +1,10 @@
+name: /home/mark/repos/v2ray-config-python/env
+channels:
+  - conda-forge
+dependencies:
+  - python
+  - ipykernel
+  - pydantic
+  - ca-certificates
+  - openssl
+prefix: /home/mark/repos/v2ray-config-python/env

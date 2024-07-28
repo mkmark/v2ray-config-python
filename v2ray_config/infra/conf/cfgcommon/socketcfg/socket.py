@@ -7,13 +7,13 @@ from typing import Optional
 @dataclass(slots=True)
 class SocketConfig:
     mark: Optional[int] = None
-    tcp_fast_open: Optional[bool] = None
+    tcpFastOpen: Optional[bool] = None
     tproxy: Optional[str] = None
-    accept_proxy_protocol: Optional[bool] = None
-    tcp_keep_alive_interval: Optional[int] = None
-    tcp_keep_alive_idle: Optional[int] = None
-    tcp_fast_open_queue_length: Optional[int] = None
-    bind_to_device: Optional[str] = None
-    rx_buf_size: Optional[int] = None
-    tx_buf_size: Optional[int] = None
-    force_buf_size: Optional[bool] = None
+    acceptProxyProtocol: Optional[bool] = None
+    tcpKeepAliveInterval: Optional[int] = None
+    tcpKeepAliveIdle: Optional[int] = None
+    tcpFastOpenQueueLength: Optional[int] = None
+    bindToDevice: Optional[str] = None
+    rxBufSize: Optional[int] = None
+    txBufSize: Optional[int] = None
+    forceBufSize: Optional[bool] = None

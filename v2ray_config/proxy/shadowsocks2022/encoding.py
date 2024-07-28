@@ -9,20 +9,20 @@ from typing import Optional
 # import v2ray_config.common.protocol as protocol
 
 
-# @dataclass(slots=True)
-# class TCPRequest:
-#     key_derivation: Optional[KeyDerivation] = field(default_factory=KeyDerivation)
-#     method: Optional[Method] = field(default_factory=Method)
-#     c_2s_salt: Optional[RequestSalt] = field(default_factory=RequestSalt)
-#     c_2s_nonce: Optional[BytesGenerator] = field(default_factory=BytesGenerator)
-#     c_2s_aead: Optional[AEAD] = field(default_factory=AEAD)
-#     s_2c_salt: Optional[RequestSalt] = field(default_factory=RequestSalt)
-#     s_2c_nonce: Optional[BytesGenerator] = field(default_factory=BytesGenerator)
-#     s_2c_aead: Optional[AEAD] = field(default_factory=AEAD)
-#     s_2c_salt_assert: Optional[RequestSalt] = field(default_factory=RequestSalt)
-#     s_2c_initial_payload_size: Optional[int] = None
+@dataclass(slots=True)
+class TCPRequest:
+    keyDerivation: Optional[KeyDerivation] = field(default_factory=KeyDerivation)
+    method: Optional[Method] = field(default_factory=Method)
+    c2sSalt: Optional[RequestSalt] = field(default_factory=RequestSalt)
+    c2sNonce: Optional[BytesGenerator] = field(default_factory=BytesGenerator)
+    c2sAEAD: Optional[AEAD] = field(default_factory=AEAD)
+    s2cSalt: Optional[RequestSalt] = field(default_factory=RequestSalt)
+    s2cNonce: Optional[BytesGenerator] = field(default_factory=BytesGenerator)
+    s2cAEAD: Optional[AEAD] = field(default_factory=AEAD)
+    s2cSaltAssert: Optional[RequestSalt] = field(default_factory=RequestSalt)
+    s2cInitialPayloadSize: Optional[int] = None
 
 
-# @dataclass(slots=True)
-# class AEADChunkSizeParser:
-#     auth: Optional[AEADAuthenticator] = field(default_factory=AEADAuthenticator)
+@dataclass(slots=True)
+class AEADChunkSizeParser:
+    auth: Optional[AEADAuthenticator] = field(default_factory=AEADAuthenticator)

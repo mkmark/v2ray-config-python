@@ -8,5 +8,5 @@ from typing import Optional
 
 @dataclass(slots=True)
 class ResolvableContext(Context):
-    dns_client: Optional[Client] = field(default_factory=Client)
-    resolved_i_ps: Optional[list[IP]] = field(default_factory=list[IP])
+    dnsClient: Optional[Client] = field(default_factory=Client)
+    resolvedIPs: Optional[list[IP]] = field(default_factory=list[IP])

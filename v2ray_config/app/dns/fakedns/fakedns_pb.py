@@ -7,7 +7,7 @@ from typing import Optional
 @dataclass(slots=True)
 class FakeDnsPool:
     ip_pool: Optional[str] = None
-    lru_size: Optional[int] = None
+    lruSize: Optional[int] = None
 
 
 @dataclass(slots=True)

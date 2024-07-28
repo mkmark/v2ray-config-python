@@ -15,7 +15,7 @@ class ShadowsocksServerConfig:
     level: Optional[int] = None
     email: Optional[str] = None
     network: Optional[list[str]] = field(default_factory=list[str])
-    iv_check: Optional[bool] = None
+    ivCheck: Optional[bool] = None
 
 
 @dataclass(slots=True)
@@ -27,7 +27,7 @@ class ShadowsocksServerTarget:
     email: Optional[str] = None
     ota: Optional[bool] = None
     level: Optional[int] = None
-    iv_check: Optional[bool] = None
+    ivCheck: Optional[bool] = None
 
 
 @dataclass(slots=True)

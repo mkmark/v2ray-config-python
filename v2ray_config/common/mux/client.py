@@ -26,7 +26,7 @@ class IncrementalWorkerPicker:
     factory: Optional[ClientWorkerFactory] = field(default_factory=ClientWorkerFactory)
     access: Optional[Mutex] = field(default_factory=Mutex)
     workers: Optional[list[ClientWorker]] = field(default_factory=list[ClientWorker])
-    cleanup_task: Optional[Periodic] = field(default_factory=Periodic)
+    cleanupTask: Optional[Periodic] = field(default_factory=Periodic)
 
 
 @dataclass(slots=True)
@@ -39,13 +39,13 @@ class DialingWorkerFactory:
 
 @dataclass(slots=True)
 class ClientStrategy:
-    max_concurrency: Optional[int] = None
-    max_connection: Optional[int] = None
+    maxConcurrency: Optional[int] = None
+    maxConnection: Optional[int] = None
 
 
 @dataclass(slots=True)
 class ClientWorker:
-    session_manager: Optional[SessionManager] = field(default_factory=SessionManager)
+    sessionManager: Optional[SessionManager] = field(default_factory=SessionManager)
     link: Optional[Link] = field(default_factory=Link)
     done: Optional[Instance] = field(default_factory=Instance)
     strategy: Optional[ClientStrategy] = field(default_factory=ClientStrategy)

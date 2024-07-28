@@ -4,6 +4,6 @@ from typing import Optional
 
 @dataclass(slots=True)
 class cipherSuiteTLS13:
-    id: Optional[int] = None
-    key_len: Optional[int] = None
+    iD: Optional[int] = None
+    keyLen: Optional[int] = None
     hash: Optional[Hash] = field(default_factory=Hash)

@@ -6,5 +6,5 @@ from typing import Optional
 
 @dataclass(slots=True)
 class BrowserForwarderConfig:
-    listen_addr: Optional[str] = None
-    listen_port: Optional[int] = None
+    listenAddr: Optional[str] = None
+    listenPort: Optional[int] = None

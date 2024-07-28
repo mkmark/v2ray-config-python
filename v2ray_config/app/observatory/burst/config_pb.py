@@ -15,7 +15,7 @@ class HealthPingConfig:
     destination: Optional[str] = None
     connectivity: Optional[str] = None
     interval: Optional[int] = None
-    sampling_count: Optional[int] = None
+    samplingCount: Optional[int] = None
     timeout: Optional[int] = None
 
 

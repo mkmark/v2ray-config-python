@@ -3,8 +3,8 @@ from pydantic import RootModel
 from . import app
 from . import infra
 from . import proxy
-from . import common
 from . import transport
+from . import common
 
 
 def remove_empty_elements(d) -> dict:
@@ -29,7 +29,7 @@ def remove_empty_elements(d) -> dict:
 
 class Cfgv4(infra.conf.v4.v2ray.Config):
     def to_dict(self, clean=True):
-        d = RootModel[infra.conf.v4.v2ray.Config](self).model_dump(by_alias=True)
+        d = RootModel[infra.conf.v4.v2ray.Config](self).model_dump()
         if clean:
             d = remove_empty_elements(d)
         return d
@@ -37,9 +37,7 @@ class Cfgv4(infra.conf.v4.v2ray.Config):
 
 class Cfgv5(infra.conf.v5cfg.skeleton.RootConfig):
     def to_dict(self, clean=True):
-        d = RootModel[infra.conf.v5cfg.skeleton.RootConfig](self).model_dump(
-            by_alias=True
-        )
+        d = RootModel[infra.conf.v5cfg.skeleton.RootConfig](self).model_dump()
         if clean:
             d = remove_empty_elements(d)
         return d

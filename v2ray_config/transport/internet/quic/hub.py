@@ -11,7 +11,7 @@ from typing import Optional
 
 @dataclass(slots=True)
 class Listener:
-    raw_conn: Optional[sysConn] = field(default_factory=sysConn)
+    rawConn: Optional[sysConn] = field(default_factory=sysConn)
     listener: Optional[Listener] = field(default_factory=Listener)
     done: Optional[Instance] = field(default_factory=Instance)
-    add_conn: Optional[ConnHandler] = field(default_factory=ConnHandler)
+    addConn: Optional[ConnHandler] = field(default_factory=ConnHandler)

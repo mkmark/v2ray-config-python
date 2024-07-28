@@ -11,7 +11,6 @@ class Control_State(int):
 
 @dataclass(slots=True)
 class Control:
-    state: Optional[Control_State] = field(default_factory=Control_State)
     random: Optional[list[int]] = field(default_factory=list[int])
 
 

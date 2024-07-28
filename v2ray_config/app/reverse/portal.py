@@ -32,7 +32,7 @@ class Outbound:
 class StaticMuxPicker:
     access: Optional[Mutex] = field(default_factory=Mutex)
     workers: Optional[list[PortalWorker]] = field(default_factory=list[PortalWorker])
-    c_task: Optional[Periodic] = field(default_factory=Periodic)
+    cTask: Optional[Periodic] = field(default_factory=Periodic)
 
 
 @dataclass(slots=True)

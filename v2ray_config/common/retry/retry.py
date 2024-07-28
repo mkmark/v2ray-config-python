@@ -4,4 +4,4 @@ from typing import Optional
 
 @dataclass(slots=True)
 class retryer:
-    total_attempt: Optional[int] = None
+    totalAttempt: Optional[int] = None

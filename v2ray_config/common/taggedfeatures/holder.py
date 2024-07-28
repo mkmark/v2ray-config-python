@@ -9,5 +9,5 @@ from typing import Optional
 class Holder:
     access: Optional[RWMutex] = field(default_factory=RWMutex)
     features: Optional[dict[str, Feature]] = field(default_factory=dict[str, Feature])
-    member_type: Optional[Type] = field(default_factory=Type)
+    memberType: Optional[Type] = field(default_factory=Type)
     ctx: Optional[Context] = field(default_factory=Context)

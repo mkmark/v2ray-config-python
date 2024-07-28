@@ -15,5 +15,5 @@ class SubscriptionManagerImpl:
     ctx: Optional[Context] = field(default_factory=Context)
     s: Optional[Instance] = field(default_factory=Instance)
     converter: Optional[ConverterRegistry] = field(default_factory=ConverterRegistry)
-    tracked_subscriptions: Optional[dict[str, trackedSubscription]] = field(default_factory=dict[str, trackedSubscription])
-    refresh_task: Optional[Periodic] = field(default_factory=Periodic)
+    trackedSubscriptions: Optional[dict[str, trackedSubscription]] = field(default_factory=dict[str, trackedSubscription])
+    refreshTask: Optional[Periodic] = field(default_factory=Periodic)

@@ -12,8 +12,8 @@ class LogType(int):
 
 @dataclass(slots=True)
 class LogSpecification:
-    type: Optional[LogType] = field(default_factory=LogType)
-    level: Optional[Severity] = field(default_factory=Severity)
+    type: Optional[str] = None
+    level: Optional[str] = None
     path: Optional[str] = None
 
 

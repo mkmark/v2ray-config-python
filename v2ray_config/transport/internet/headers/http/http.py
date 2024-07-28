@@ -18,7 +18,7 @@ class NoOpWriter:
 @dataclass(slots=True)
 class HeaderReader:
     req: Optional[Request] = field(default_factory=Request)
-    expected_header: Optional[RequestConfig] = field(default_factory=RequestConfig)
+    expectedHeader: Optional[RequestConfig] = field(default_factory=RequestConfig)
 
 
 @dataclass(slots=True)
@@ -28,13 +28,13 @@ class HeaderWriter:
 
 @dataclass(slots=True)
 class Conn(Conn):
-    read_buffer: Optional[Buffer] = field(default_factory=Buffer)
-    one_time_reader: Optional[Reader] = field(default_factory=Reader)
-    one_time_writer: Optional[Writer] = field(default_factory=Writer)
-    error_writer: Optional[Writer] = field(default_factory=Writer)
-    error_mismatch_writer: Optional[Writer] = field(default_factory=Writer)
-    error_too_long_writer: Optional[Writer] = field(default_factory=Writer)
-    err_reason: Optional[error] = field(default_factory=error)
+    readBuffer: Optional[Buffer] = field(default_factory=Buffer)
+    oneTimeReader: Optional[Reader] = field(default_factory=Reader)
+    oneTimeWriter: Optional[Writer] = field(default_factory=Writer)
+    errorWriter: Optional[Writer] = field(default_factory=Writer)
+    errorMismatchWriter: Optional[Writer] = field(default_factory=Writer)
+    errorTooLongWriter: Optional[Writer] = field(default_factory=Writer)
+    errReason: Optional[error] = field(default_factory=error)
 
 
 @dataclass(slots=True)

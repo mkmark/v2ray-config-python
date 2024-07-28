@@ -12,4 +12,4 @@ class DeviceConstructor(func(Options) (Device, error)):
 @dataclass(slots=True)
 class Options:
     name: Optional[str] = None
-    mtu: Optional[int] = None
+    mTU: Optional[int] = None

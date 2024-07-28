@@ -7,7 +7,7 @@ from typing import Optional
 @dataclass(slots=True)
 class Config:
     tag: Optional[str] = None
-    service: Optional[list[Any]] = field(default_factory=list[Any])
+    service: Optional[list[dict]] = field(default_factory=list[dict])
 
 
 @dataclass(slots=True)

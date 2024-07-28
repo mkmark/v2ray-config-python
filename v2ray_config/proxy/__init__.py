@@ -3,7 +3,6 @@ from . import freedom
 # from . import shadowsocks
 from . import loopback
 from . import http
-
 from . import dokodemo
 
 # from . import proxy

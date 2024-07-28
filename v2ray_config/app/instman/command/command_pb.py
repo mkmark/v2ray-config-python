@@ -17,8 +17,8 @@ class ListInstanceResp:
 @dataclass(slots=True)
 class AddInstanceReq:
     name: Optional[str] = None
-    config_type: Optional[str] = None
-    config_content_b64: Optional[str] = None
+    configType: Optional[str] = None
+    configContentB64: Optional[str] = None
 
 
 @dataclass(slots=True)

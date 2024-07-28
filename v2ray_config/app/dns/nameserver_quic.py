@@ -17,7 +17,7 @@ class QUICNameServer(RWMutex):
     ips: Optional[dict[str, record]] = field(default_factory=dict[str, record])
     pub: Optional[Service] = field(default_factory=Service)
     cleanup: Optional[Periodic] = field(default_factory=Periodic)
-    req_id: Optional[int] = None
+    reqID: Optional[int] = None
     name: Optional[str] = None
     destination: Optional[Destination] = field(default_factory=Destination)
     connection: Optional[Connection] = field(default_factory=Connection)

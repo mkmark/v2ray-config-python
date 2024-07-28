@@ -8,4 +8,4 @@ from typing import Optional
 @dataclass(slots=True)
 class ActivityTimer(RWMutex):
     updated: Optional[chan] = field(default_factory=chan)
-    check_task: Optional[Periodic] = field(default_factory=Periodic)
+    checkTask: Optional[Periodic] = field(default_factory=Periodic)

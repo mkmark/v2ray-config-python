@@ -21,19 +21,19 @@ from typing import Optional
 # import v2ray_config.transport.internet as internet
 
 
-# @dataclass(slots=True)
-# class userByEmail(Mutex):
-#     cache: Optional[dict[str, MemoryUser]] = field(default_factory=dict[str, MemoryUser])
-#     default_level: Optional[int] = None
-#     default_alter_i_ds: Optional[int] = None
+@dataclass(slots=True)
+class userByEmail(Mutex):
+    cache: Optional[dict[str, MemoryUser]] = field(default_factory=dict[str, MemoryUser])
+    defaultLevel: Optional[int] = None
+    defaultAlterIDs: Optional[int] = None
 
 
-# @dataclass(slots=True)
-# class Handler:
-#     policy_manager: Optional[Manager] = field(default_factory=Manager)
-#     inbound_handler_manager: Optional[Manager] = field(default_factory=Manager)
-#     clients: Optional[TimedUserValidator] = field(default_factory=TimedUserValidator)
-#     users_by_email: Optional[userByEmail] = field(default_factory=userByEmail)
-#     detours: Optional[DetourConfig] = field(default_factory=DetourConfig)
-#     session_history: Optional[SessionHistory] = field(default_factory=SessionHistory)
-#     secure: Optional[bool] = None
+@dataclass(slots=True)
+class Handler:
+    policyManager: Optional[Manager] = field(default_factory=Manager)
+    inboundHandlerManager: Optional[Manager] = field(default_factory=Manager)
+    clients: Optional[TimedUserValidator] = field(default_factory=TimedUserValidator)
+    usersByEmail: Optional[userByEmail] = field(default_factory=userByEmail)
+    detours: Optional[DetourConfig] = field(default_factory=DetourConfig)
+    sessionHistory: Optional[SessionHistory] = field(default_factory=SessionHistory)
+    secure: Optional[bool] = None

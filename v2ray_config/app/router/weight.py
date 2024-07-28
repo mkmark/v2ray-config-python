@@ -12,5 +12,5 @@ class WeightManager:
     settings: Optional[list[StrategyWeight]] = field(default_factory=list[StrategyWeight])
     cache: Optional[dict[str, float]] = field(default_factory=dict[str, float])
     scaler: Optional[weightScaler] = field(default_factory=weightScaler)
-    default_weight: Optional[float] = None
+    defaultWeight: Optional[float] = None
     mu: Optional[Mutex] = field(default_factory=Mutex)

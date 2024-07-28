@@ -5,9 +5,9 @@ from typing import Optional
 @dataclass(slots=True)
 class lru:
     capacity: Optional[int] = None
-    double_linkedlist: Optional[List] = field(default_factory=List)
-    key_to_element: Optional[Map] = field(default_factory=Map)
-    value_to_element: Optional[Map] = field(default_factory=Map)
+    doubleLinkedlist: Optional[List] = field(default_factory=List)
+    keyToElement: Optional[Map] = field(default_factory=Map)
+    valueToElement: Optional[Map] = field(default_factory=Map)
     mu: Optional[Mutex] = field(default_factory=Mutex)
 
 

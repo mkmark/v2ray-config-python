@@ -10,9 +10,9 @@ from typing import Optional
 @dataclass(slots=True)
 class RouterRule:
     type: Optional[str] = None
-    outbound_tag: Optional[str] = None
-    balancer_tag: Optional[str] = None
-    domain_matcher: Optional[str] = None
+    outboundTag: Optional[str] = None
+    balancerTag: Optional[str] = None
+    domainMatcher: Optional[str] = None
 
 
 @dataclass(slots=True)
@@ -25,6 +25,6 @@ class RawFieldRule(RouterRule):
     source: Optional[list[str]] = field(default_factory=list[str])
     source_port: Optional[list[str]] = field(default_factory=list[str])
     user: Optional[list[str]] = field(default_factory=list[str])
-    inbound_tag: Optional[list[str]] = field(default_factory=list[str])
+    inboundTag: Optional[list[str]] = field(default_factory=list[str])
     protocol: Optional[list[str]] = field(default_factory=list[str])
     attrs: Optional[str] = None

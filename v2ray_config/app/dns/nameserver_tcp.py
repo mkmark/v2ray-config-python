@@ -20,4 +20,4 @@ class TCPNameServer(RWMutex):
     ips: Optional[dict[str, record]] = field(default_factory=dict[str, record])
     pub: Optional[Service] = field(default_factory=Service)
     cleanup: Optional[Periodic] = field(default_factory=Periodic)
-    req_id: Optional[int] = None
+    reqID: Optional[int] = None

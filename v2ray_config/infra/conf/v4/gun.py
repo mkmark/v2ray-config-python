@@ -6,4 +6,4 @@ from typing import Optional
 
 @dataclass(slots=True)
 class GunConfig:
-    service_name: Optional[str] = None
+    serviceName: Optional[str] = None

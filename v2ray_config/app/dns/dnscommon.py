@@ -10,20 +10,20 @@ from typing import Optional
 @dataclass(slots=True)
 class record:
     a: Optional[IPRecord] = field(default_factory=IPRecord)
-    aaaa: Optional[IPRecord] = field(default_factory=IPRecord)
+    aAAA: Optional[IPRecord] = field(default_factory=IPRecord)
 
 
 @dataclass(slots=True)
 class IPRecord:
-    req_id: Optional[int] = None
-    ip: Optional[list[str]] = field(default_factory=list[str])
+    reqID: Optional[int] = None
+    iP: Optional[list[str]] = field(default_factory=list[str])
     expire: Optional[Time] = field(default_factory=Time)
-    r_code: Optional[RCode] = field(default_factory=RCode)
+    rCode: Optional[RCode] = field(default_factory=RCode)
 
 
 @dataclass(slots=True)
 class dnsRequest:
-    req_type: Optional[Type] = field(default_factory=Type)
+    reqType: Optional[Type] = field(default_factory=Type)
     domain: Optional[str] = None
     start: Optional[Time] = field(default_factory=Time)
     expire: Optional[Time] = field(default_factory=Time)

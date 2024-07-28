@@ -22,6 +22,6 @@ class TargetNetwork(int):
 @dataclass(slots=True)
 class FrameMetadata:
     target: Optional[Destination] = field(default_factory=Destination)
-    session_id: Optional[int] = None
+    sessionID: Optional[int] = None
     option: Optional[Byte] = field(default_factory=Byte)
-    session_status: Optional[SessionStatus] = field(default_factory=SessionStatus)
+    sessionStatus: Optional[SessionStatus] = field(default_factory=SessionStatus)

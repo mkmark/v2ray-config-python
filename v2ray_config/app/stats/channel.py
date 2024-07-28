@@ -11,8 +11,8 @@ class Channel:
     access: Optional[RWMutex] = field(default_factory=RWMutex)
     closed: Optional[chan] = field(default_factory=chan)
     blocking: Optional[bool] = None
-    buffer_size: Optional[int] = None
-    subs_limit: Optional[int] = None
+    bufferSize: Optional[int] = None
+    subsLimit: Optional[int] = None
 
 
 @dataclass(slots=True)

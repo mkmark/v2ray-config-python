@@ -14,6 +14,6 @@ class RCodeError(int):
 
 @dataclass(slots=True)
 class IPOption:
-    i_pv_4_enable: Optional[bool] = None
-    i_pv_6_enable: Optional[bool] = None
-    fake_enable: Optional[bool] = None
+    iPv4Enable: Optional[bool] = None
+    iPv6Enable: Optional[bool] = None
+    fakeEnable: Optional[bool] = None

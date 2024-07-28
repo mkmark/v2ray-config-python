@@ -1,10 +1,6 @@
 from pydantic.dataclasses import dataclass, Field as field
 from typing import Optional
 
-# from v2ray_config.common.net.address_pb import IPOrDomain
-from v2ray_config.common.net.packetaddr.config_pb import PacketAddrType
-from v2ray_config.common.protocol.server_spec_pb import ServerEndpoint
-
 # import v2ray_config.common.net as net
 # import v2ray_config.common.net.packetaddr as packetaddr
 # import v2ray_config.common.protocol as protocol
@@ -34,9 +30,7 @@ class ServerConfig:
     udp_enabled: Optional[bool] = None
     timeout: Optional[int] = None
     user_level: Optional[int] = None
-    packet_encoding: Optional[PacketAddrType | str] = field(
-        default_factory=PacketAddrType
-    )
+    packet_encoding: Optional[str] = None
 
 
 @dataclass(slots=True)

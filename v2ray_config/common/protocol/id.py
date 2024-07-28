@@ -13,4 +13,4 @@ class IDHash(Hash):
 @dataclass(slots=True)
 class ID:
     uuid: Optional[UUID] = field(default_factory=UUID)
-    cmd_key: Optional[[IDBytesLen]byte] = field(default_factory=[IDBytesLen]byte)
+    cmdKey: Optional[[IDBytesLen]byte] = field(default_factory=[IDBytesLen]byte)

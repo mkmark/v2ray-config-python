@@ -4,4 +4,4 @@ from typing import Optional
 
 @dataclass(slots=True)
 class Annotation:
-    api: Optional[str] = None
+    aPI: Optional[str] = None

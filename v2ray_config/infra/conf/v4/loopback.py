@@ -6,4 +6,4 @@ from typing import Optional
 
 @dataclass(slots=True)
 class LoopbackConfig:
-    inbound_tag: Optional[str] = None
+    inboundTag: Optional[str] = None

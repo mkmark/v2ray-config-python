@@ -26,11 +26,11 @@ from typing import Optional
 class Handler:
     ctx: Optional[Context] = field(default_factory=Context)
     tag: Optional[str] = None
-    sender_settings: Optional[SenderConfig] = field(default_factory=SenderConfig)
-    stream_settings: Optional[MemoryStreamConfig] = field(default_factory=MemoryStreamConfig)
+    senderSettings: Optional[SenderConfig] = field(default_factory=SenderConfig)
+    streamSettings: Optional[MemoryStreamConfig] = field(default_factory=MemoryStreamConfig)
     proxy: Optional[Outbound] = field(default_factory=Outbound)
-    outbound_manager: Optional[Manager] = field(default_factory=Manager)
+    outboundManager: Optional[Manager] = field(default_factory=Manager)
     mux: Optional[ClientManager] = field(default_factory=ClientManager)
-    uplink_counter: Optional[Counter] = field(default_factory=Counter)
-    downlink_counter: Optional[Counter] = field(default_factory=Counter)
+    uplinkCounter: Optional[Counter] = field(default_factory=Counter)
+    downlinkCounter: Optional[Counter] = field(default_factory=Counter)
     dns: Optional[Client] = field(default_factory=Client)

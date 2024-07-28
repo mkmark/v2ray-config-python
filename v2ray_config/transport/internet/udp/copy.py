@@ -17,4 +17,4 @@ class CopyOption(func(*copyHandler)):
 
 @dataclass(slots=True)
 class copyHandler:
-    on_data: Optional[list[dataHandler]] = field(default_factory=list[dataHandler])
+    onData: Optional[list[dataHandler]] = field(default_factory=list[dataHandler])

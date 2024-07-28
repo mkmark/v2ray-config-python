@@ -17,15 +17,15 @@ class AEADChunkSizeParser:
 
 @dataclass(slots=True)
 class ChunkStreamReader:
-    size_decoder: Optional[ChunkSizeDecoder] = field(default_factory=ChunkSizeDecoder)
+    sizeDecoder: Optional[ChunkSizeDecoder] = field(default_factory=ChunkSizeDecoder)
     reader: Optional[BufferedReader] = field(default_factory=BufferedReader)
     buffer: Optional[list[int]] = field(default_factory=list[int])
-    left_over_size: Optional[int] = None
-    max_num_chunk: Optional[int] = None
-    num_chunk: Optional[int] = None
+    leftOverSize: Optional[int] = None
+    maxNumChunk: Optional[int] = None
+    numChunk: Optional[int] = None
 
 
 @dataclass(slots=True)
 class ChunkStreamWriter:
-    size_encoder: Optional[ChunkSizeEncoder] = field(default_factory=ChunkSizeEncoder)
+    sizeEncoder: Optional[ChunkSizeEncoder] = field(default_factory=ChunkSizeEncoder)
     writer: Optional[Writer] = field(default_factory=Writer)

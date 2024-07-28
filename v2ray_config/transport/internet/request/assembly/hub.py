@@ -13,8 +13,8 @@ from typing import Optional
 class server:
     tripper: Optional[RoundTripperServer] = field(default_factory=RoundTripperServer)
     assembler: Optional[SessionAssemblerServer] = field(default_factory=SessionAssemblerServer)
-    add_conn: Optional[ConnHandler] = field(default_factory=ConnHandler)
-    stream_settings: Optional[MemoryStreamConfig] = field(default_factory=MemoryStreamConfig)
+    addConn: Optional[ConnHandler] = field(default_factory=ConnHandler)
+    streamSettings: Optional[MemoryStreamConfig] = field(default_factory=MemoryStreamConfig)
     addr: Optional[str] = None
     port: Optional[int] = None
 

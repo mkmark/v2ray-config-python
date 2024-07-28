@@ -8,7 +8,7 @@ from typing import Optional
 
 @dataclass(slots=True)
 class FreedomConfig:
-    domain_strategy: Optional[str] = None
+    domainStrategy: Optional[str] = None
     timeout: Optional[int] = None
     redirect: Optional[str] = None
-    user_level: Optional[int] = None
+    userLevel: Optional[int] = None

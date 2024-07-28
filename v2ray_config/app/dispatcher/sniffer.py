@@ -16,8 +16,8 @@ class protocolSniffer(Context, []byte) (SniffResult, error)):
 
 @dataclass(slots=True)
 class protocolSnifferWithMetadata:
-    protocol_sniffer: Optional[protocolSniffer] = field(default_factory=protocolSniffer)
-    metadata_sniffer: Optional[bool] = None
+    protocolSniffer: Optional[protocolSniffer] = field(default_factory=protocolSniffer)
+    metadataSniffer: Optional[bool] = None
     network: Optional[str] = None
 
 
@@ -28,5 +28,5 @@ class Sniffer:
 
 @dataclass(slots=True)
 class compositeResult:
-    domain_result: Optional[SniffResult] = field(default_factory=SniffResult)
-    protocol_result: Optional[SniffResult] = field(default_factory=SniffResult)
+    domainResult: Optional[SniffResult] = field(default_factory=SniffResult)
+    protocolResult: Optional[SniffResult] = field(default_factory=SniffResult)

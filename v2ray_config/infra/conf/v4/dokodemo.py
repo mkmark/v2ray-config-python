@@ -11,5 +11,5 @@ class DokodemoConfig:
     port: Optional[int] = None
     network: Optional[list[str]] = field(default_factory=list[str])
     timeout: Optional[int] = None
-    follow_redirect: Optional[bool] = None
-    user_level: Optional[int] = None
+    followRedirect: Optional[bool] = None
+    userLevel: Optional[int] = None

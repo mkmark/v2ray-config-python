@@ -11,6 +11,6 @@ class allocStrategy:
 
 @dataclass(slots=True)
 class ReadVReader(Reader):
-    raw_conn: Optional[RawConn] = field(default_factory=RawConn)
+    rawConn: Optional[RawConn] = field(default_factory=RawConn)
     mr: Optional[multiReader] = field(default_factory=multiReader)
     alloc: Optional[allocStrategy] = field(default_factory=allocStrategy)

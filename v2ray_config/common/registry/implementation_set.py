@@ -11,11 +11,11 @@ class CustomLoader(Message, error)):
 
 @dataclass(slots=True)
 class implementationSet:
-    alias_lookup: Optional[dict[str, implementation]] = field(default_factory=dict[str, implementation])
+    aliasLookup: Optional[dict[str, implementation]] = field(default_factory=dict[str, implementation])
 
 
 @dataclass(slots=True)
 class implementation:
-    full_name: Optional[str] = None
+    fullName: Optional[str] = None
     alias: Optional[list[str]] = field(default_factory=list[str])
     loader: Optional[CustomLoader] = field(default_factory=CustomLoader)

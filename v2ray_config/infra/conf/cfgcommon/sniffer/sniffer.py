@@ -8,5 +8,5 @@ from typing import Optional
 @dataclass(slots=True)
 class SniffingConfig:
     enabled: Optional[bool] = None
-    dest_override: Optional[list[str]] = field(default_factory=list[str])
-    metadata_only: Optional[bool] = None
+    destOverride: Optional[list[str]] = field(default_factory=list[str])
+    metadataOnly: Optional[bool] = None

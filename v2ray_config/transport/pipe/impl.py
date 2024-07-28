@@ -15,13 +15,13 @@ class state(int):
 @dataclass(slots=True)
 class pipeOption:
     limit: Optional[int] = None
-    discard_overflow: Optional[bool] = None
+    discardOverflow: Optional[bool] = None
 
 
 @dataclass(slots=True)
 class pipe(Mutex):
     data: Optional[MultiBuffer] = field(default_factory=MultiBuffer)
-    read_signal: Optional[Notifier] = field(default_factory=Notifier)
-    write_signal: Optional[Notifier] = field(default_factory=Notifier)
+    readSignal: Optional[Notifier] = field(default_factory=Notifier)
+    writeSignal: Optional[Notifier] = field(default_factory=Notifier)
     done: Optional[Instance] = field(default_factory=Instance)
     option: Optional[pipeOption] = field(default_factory=pipeOption)

@@ -14,21 +14,11 @@ class DomainStrategy(int):
 
 
 @dataclass(slots=True)
-class RoutingRule_Tag:
-    tag: Optional[str] = None
-
-
-@dataclass(slots=True)
-class RoutingRule_BalancingTag:
-    balancing_tag: Optional[str] = None
-
-
-@dataclass(slots=True)
 class RoutingRule:
-    # target_tag: Optional[isRoutingRule_TargetTag] = field(default_factory=isRoutingRule_TargetTag)
     tag: Optional[str] = None
-    balancing_tag: Optional[str] = None
+    balancingTag: Optional[str] = None
 
+    # targetTag: Optional[isRoutingRule_TargetTag] = field(default_factory=isRoutingRule_TargetTag)
     domain: Optional[list[Domain]] = field(default_factory=list[Domain])
     cidr: Optional[list[CIDR]] = field(default_factory=list[CIDR])
     geoip: Optional[list[GeoIP]] = field(default_factory=list[GeoIP])
@@ -45,6 +35,16 @@ class RoutingRule:
     attributes: Optional[str] = None
     domain_matcher: Optional[str] = None
     geo_domain: Optional[list[GeoSite]] = field(default_factory=list[GeoSite])
+
+
+@dataclass(slots=True)
+class RoutingRule_Tag:
+    tag: Optional[str] = None
+
+
+@dataclass(slots=True)
+class RoutingRule_BalancingTag:
+    balancingTag: Optional[str] = None
 
 
 @dataclass(slots=True)
@@ -79,7 +79,7 @@ class StrategyLeastLoadConfig:
     costs: Optional[list[StrategyWeight]] = field(default_factory=list[StrategyWeight])
     baselines: Optional[list[int]] = field(default_factory=list[int])
     expected: Optional[int] = None
-    max_rtt: Optional[int] = None
+    maxRTT: Optional[int] = None
     tolerance: Optional[float] = None
     observer_tag: Optional[str] = None
 
@@ -94,21 +94,11 @@ class Config:
 
 
 @dataclass(slots=True)
-class SimplifiedRoutingRule_Tag:
-    tag: Optional[str] = None
-
-
-@dataclass(slots=True)
-class SimplifiedRoutingRule_BalancingTag:
-    balancing_tag: Optional[str] = None
-
-
-@dataclass(slots=True)
 class SimplifiedRoutingRule:
-    # target_tag: Optional[isSimplifiedRoutingRule_TargetTag] = field(default_factory=isSimplifiedRoutingRule_TargetTag)
     tag: Optional[str] = None
-    balancing_tag: Optional[str] = None
+    balancingTag: Optional[str] = None
 
+    # targetTag: Optional[isSimplifiedRoutingRule_TargetTag] = field(default_factory=isSimplifiedRoutingRule_TargetTag)
     domain: Optional[list[Domain]] = field(default_factory=list[Domain])
     geoip: Optional[list[GeoIP]] = field(default_factory=list[GeoIP])
     port_list: Optional[str] = None
@@ -121,6 +111,16 @@ class SimplifiedRoutingRule:
     attributes: Optional[str] = None
     domain_matcher: Optional[str] = None
     geo_domain: Optional[list[GeoSite]] = field(default_factory=list[GeoSite])
+
+
+@dataclass(slots=True)
+class SimplifiedRoutingRule_Tag:
+    tag: Optional[str] = None
+
+
+@dataclass(slots=True)
+class SimplifiedRoutingRule_BalancingTag:
+    balancingTag: Optional[str] = None
 
 
 @dataclass(slots=True)

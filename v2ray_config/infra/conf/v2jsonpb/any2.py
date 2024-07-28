@@ -4,4 +4,4 @@ from typing import Optional
 
 @dataclass(slots=True)
 class anyresolverv2:
-    background_resolver: Optional[AnyResolver] = field(default_factory=AnyResolver)
+    backgroundResolver: Optional[AnyResolver] = field(default_factory=AnyResolver)

@@ -6,6 +6,6 @@ from typing import Optional
 # import v2ray_config.transport.internet as internet
 
 
-# @dataclass(slots=True)
-# class Handler:
-#     response: Optional[ResponseConfig] = field(default_factory=ResponseConfig)
+@dataclass(slots=True)
+class Handler:
+    response: Optional[ResponseConfig] = field(default_factory=ResponseConfig)

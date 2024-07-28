@@ -15,8 +15,8 @@ from typing import Optional
 # import v2ray_config.transport.internet as internet
 
 
-# @dataclass(slots=True)
-# class Handler:
-#     policy_manager: Optional[Manager] = field(default_factory=Manager)
-#     dns: Optional[Client] = field(default_factory=Client)
-#     config: Optional[Config] = field(default_factory=Config)
+@dataclass(slots=True)
+class Handler:
+    policyManager: Optional[Manager] = field(default_factory=Manager)
+    dns: Optional[Client] = field(default_factory=Client)
+    config: Optional[Config] = field(default_factory=Config)

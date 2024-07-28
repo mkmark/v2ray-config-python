@@ -7,4 +7,4 @@ from typing import Optional
 @dataclass(slots=True)
 class ProxyConfig:
     tag: Optional[str] = None
-    transport_layer: Optional[bool] = None
+    transportLayer: Optional[bool] = None

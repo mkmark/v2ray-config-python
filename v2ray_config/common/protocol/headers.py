@@ -32,7 +32,7 @@ class ResponseHeader:
 class CommandSwitchAccount:
     host: Optional[str] = None
     port: Optional[int] = None
-    id: Optional[UUID] = field(default_factory=UUID)
+    iD: Optional[UUID] = field(default_factory=UUID)
     level: Optional[int] = None
-    alter_ids: Optional[int] = None
-    valid_min: Optional[int] = None
+    alterIds: Optional[int] = None
+    validMin: Optional[int] = None

@@ -1,4 +1,3 @@
-from enum import StrEnum
 from pydantic.dataclasses import dataclass, Field as field
 from typing import Optional
 
@@ -14,9 +13,7 @@ class Domain_Type(int):
 class Domain:
     type: Optional[str] = None
     value: Optional[str] = None
-    # attribute: Optional[list[Domain_Attribute]] = field(
-    #     default_factory=list[Domain_Attribute]
-    # )
+    # attribute: Optional[list[Domain_Attribute]] = field(default_factory=list[Domain_Attribute])
 
 
 @dataclass(slots=True)
@@ -55,14 +52,22 @@ class GeoSiteList:
     entry: Optional[list[GeoSite]] = field(default_factory=list[GeoSite])
 
 
+# @dataclass(slots=True)
+# class Domain_Attribute:
+#     key: Optional[str] = None
+#     typedValue: Optional[isDomain_Attribute_TypedValue] = field(
+#         default_factory=isDomain_Attribute_TypedValue
+#     )
+
+
 @dataclass(slots=True)
 class Domain_Attribute_BoolValue:
-    bool_value: Optional[bool] = None
+    boolValue: Optional[bool] = None
 
 
 @dataclass(slots=True)
 class Domain_Attribute_IntValue:
-    int_value: Optional[int] = None
+    intValue: Optional[int] = None
 
 
 @dataclass(slots=True)

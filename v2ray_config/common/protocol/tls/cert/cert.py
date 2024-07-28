@@ -12,4 +12,4 @@ class Option(Certificate)):
 @dataclass(slots=True)
 class Certificate:
     certificate: Optional[list[int]] = field(default_factory=list[int])
-    private_key: Optional[list[int]] = field(default_factory=list[int])
+    privateKey: Optional[list[int]] = field(default_factory=list[int])

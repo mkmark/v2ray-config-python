@@ -18,7 +18,7 @@ class ServerConfig:
 @dataclass(slots=True)
 class HTTPConfig:
     path: Optional[str] = None
-    url_prefix: Optional[str] = None
+    urlPrefix: Optional[str] = None
 
 
 @dataclass(slots=True)

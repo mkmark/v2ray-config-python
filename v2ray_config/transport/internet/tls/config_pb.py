@@ -16,8 +16,8 @@ class Config_TLSVersion(int):
 
 @dataclass(slots=True)
 class Certificate:
-    Certificate: Optional[str] = None
-    Key: Optional[str] = None
+    certificate: Optional[list[int]] = field(default_factory=list[int])
+    key: Optional[list[int]] = field(default_factory=list[int])
     usage: Optional[Certificate_Usage] = field(default_factory=Certificate_Usage)
     certificate_file: Optional[str] = None
     key_file: Optional[str] = None
@@ -31,9 +31,7 @@ class Config:
     next_protocol: Optional[list[str]] = field(default_factory=list[str])
     enable_session_resumption: Optional[bool] = None
     disable_system_root: Optional[bool] = None
-    pinned_peer_certificate_chain_sha_256: Optional[list[list[int]]] = field(
-        default_factory=list[list[int]]
-    )
+    pinned_peer_certificate_chain_sha256: Optional[list[list[int]]] = field(default_factory=list[list[int]])
     verify_client_certificate: Optional[bool] = None
     min_version: Optional[Config_TLSVersion] = field(default_factory=Config_TLSVersion)
     max_version: Optional[Config_TLSVersion] = field(default_factory=Config_TLSVersion)

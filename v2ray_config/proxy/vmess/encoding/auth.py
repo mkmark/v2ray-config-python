@@ -15,12 +15,12 @@ class FnvAuthenticator:
     pass
 
 
-# @dataclass(slots=True)
-# class ShakeSizeParser:
-#     shake: Optional[ShakeHash] = field(default_factory=ShakeHash)
-#     buffer: Optional[[2]byte] = field(default_factory=[2]byte)
+@dataclass(slots=True)
+class ShakeSizeParser:
+    shake: Optional[ShakeHash] = field(default_factory=ShakeHash)
+    buffer: Optional[[2]byte] = field(default_factory=[2]byte)
 
 
-# @dataclass(slots=True)
-# class AEADSizeParser(AEADChunkSizeParser):
-#     pass
+@dataclass(slots=True)
+class AEADSizeParser(AEADChunkSizeParser):
+    pass

@@ -9,31 +9,31 @@ from typing import Optional
 
 @dataclass(slots=True)
 class rootEnvImpl:
-    transient_storage: Optional[ScopedTransientStorage] = field(default_factory=ScopedTransientStorage)
-    system_dialer: Optional[SystemDialer] = field(default_factory=SystemDialer)
-    system_listener: Optional[SystemListener] = field(default_factory=SystemListener)
+    transientStorage: Optional[ScopedTransientStorage] = field(default_factory=ScopedTransientStorage)
+    systemDialer: Optional[SystemDialer] = field(default_factory=SystemDialer)
+    systemListener: Optional[SystemListener] = field(default_factory=SystemListener)
     ctx: Optional[Context] = field(default_factory=Context)
 
 
 @dataclass(slots=True)
 class appEnvImpl:
-    transient_storage: Optional[ScopedTransientStorage] = field(default_factory=ScopedTransientStorage)
-    system_dialer: Optional[SystemDialer] = field(default_factory=SystemDialer)
-    system_listener: Optional[SystemListener] = field(default_factory=SystemListener)
+    transientStorage: Optional[ScopedTransientStorage] = field(default_factory=ScopedTransientStorage)
+    systemDialer: Optional[SystemDialer] = field(default_factory=SystemDialer)
+    systemListener: Optional[SystemListener] = field(default_factory=SystemListener)
     ctx: Optional[Context] = field(default_factory=Context)
 
 
 @dataclass(slots=True)
 class proxyEnvImpl:
-    transient_storage: Optional[ScopedTransientStorage] = field(default_factory=ScopedTransientStorage)
-    system_dialer: Optional[SystemDialer] = field(default_factory=SystemDialer)
-    system_listener: Optional[SystemListener] = field(default_factory=SystemListener)
+    transientStorage: Optional[ScopedTransientStorage] = field(default_factory=ScopedTransientStorage)
+    systemDialer: Optional[SystemDialer] = field(default_factory=SystemDialer)
+    systemListener: Optional[SystemListener] = field(default_factory=SystemListener)
     ctx: Optional[Context] = field(default_factory=Context)
 
 
 @dataclass(slots=True)
 class transportEnvImpl:
-    transient_storage: Optional[ScopedTransientStorage] = field(default_factory=ScopedTransientStorage)
-    system_dialer: Optional[SystemDialer] = field(default_factory=SystemDialer)
-    system_listener: Optional[SystemListener] = field(default_factory=SystemListener)
+    transientStorage: Optional[ScopedTransientStorage] = field(default_factory=ScopedTransientStorage)
+    systemDialer: Optional[SystemDialer] = field(default_factory=SystemDialer)
+    systemListener: Optional[SystemListener] = field(default_factory=SystemListener)
     ctx: Optional[Context] = field(default_factory=Context)

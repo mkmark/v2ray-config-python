@@ -18,7 +18,7 @@ from typing import Optional
 # import v2ray_config.transport.internet.udp as udp
 
 
-# @dataclass(slots=True)
-# class Server:
-#     config: Optional[ServerConfig] = field(default_factory=ServerConfig)
-#     policy_manager: Optional[Manager] = field(default_factory=Manager)
+@dataclass(slots=True)
+class Server:
+    config: Optional[ServerConfig] = field(default_factory=ServerConfig)
+    policyManager: Optional[Manager] = field(default_factory=Manager)

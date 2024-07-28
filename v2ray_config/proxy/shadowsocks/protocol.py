@@ -8,13 +8,13 @@ from typing import Optional
 # import v2ray_config.common.protocol as protocol
 
 
-# @dataclass(slots=True)
-# class UDPReader:
-#     reader: Optional[Reader] = field(default_factory=Reader)
-#     user: Optional[MemoryUser] = field(default_factory=MemoryUser)
+@dataclass(slots=True)
+class UDPReader:
+    reader: Optional[Reader] = field(default_factory=Reader)
+    user: Optional[MemoryUser] = field(default_factory=MemoryUser)
 
 
-# @dataclass(slots=True)
-# class UDPWriter:
-#     writer: Optional[Writer] = field(default_factory=Writer)
-#     request: Optional[RequestHeader] = field(default_factory=RequestHeader)
+@dataclass(slots=True)
+class UDPWriter:
+    writer: Optional[Writer] = field(default_factory=Writer)
+    request: Optional[RequestHeader] = field(default_factory=RequestHeader)

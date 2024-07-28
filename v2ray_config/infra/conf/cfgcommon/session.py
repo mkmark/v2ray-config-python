@@ -12,4 +12,4 @@ class configureLoadingContext(int):
 
 @dataclass(slots=True)
 class configureLoadingEnvironment:
-    geo_loader: Optional[Loader] = field(default_factory=Loader)
+    geoLoader: Optional[Loader] = field(default_factory=Loader)

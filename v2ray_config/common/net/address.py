@@ -8,12 +8,12 @@ class AddressFamily(int):
 
 
 @dataclass(slots=True)
-class ipv4Address(list[int]):
+class ipv4Address([4]byte):
     pass
 
 
 @dataclass(slots=True)
-class ipv6Address(list[int]):
+class ipv6Address([16]byte):
     pass
 
 

@@ -19,9 +19,9 @@ class strategyLeastLoadConfig:
     costs: Optional[list[StrategyWeight]] = field(default_factory=list[StrategyWeight])
     baselines: Optional[list[str]] = field(default_factory=list[str])
     expected: Optional[int] = None
-    max_rtt: Optional[str] = None
+    maxRTT: Optional[str] = None
     tolerance: Optional[float] = None
-    observer_tag: Optional[str] = None
+    observerTag: Optional[str] = None
 
 
 @dataclass(slots=True)
@@ -35,10 +35,10 @@ class HealthCheckSettings:
 
 @dataclass(slots=True)
 class strategyLeastPingConfig:
-    observer_tag: Optional[str] = None
+    observerTag: Optional[str] = None
 
 
 @dataclass(slots=True)
 class strategyRandomConfig:
-    alive_only: Optional[bool] = None
-    observer_tag: Optional[str] = None
+    aliveOnly: Optional[bool] = None
+    observerTag: Optional[str] = None

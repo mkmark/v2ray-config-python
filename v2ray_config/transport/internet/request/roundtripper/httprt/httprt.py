@@ -9,7 +9,7 @@ from typing import Optional
 
 @dataclass(slots=True)
 class httpTripperClient:
-    http_rtt: Optional[RoundTripper] = field(default_factory=RoundTripper)
+    httpRTT: Optional[RoundTripper] = field(default_factory=RoundTripper)
     config: Optional[ClientConfig] = field(default_factory=ClientConfig)
     assembly: Optional[TransportClientAssembly] = field(default_factory=TransportClientAssembly)
 

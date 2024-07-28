@@ -20,9 +20,9 @@ from typing import Optional
 # import v2ray_config.transport.internet.udp as udp
 
 
-# @dataclass(slots=True)
-# class Server:
-#     policy_manager: Optional[Manager] = field(default_factory=Manager)
-#     validator: Optional[Validator] = field(default_factory=Validator)
-#     fallbacks: Optional[dict[string]map[string, Fallback]] = field(default_factory=dict[string]map[string, Fallback])
-#     packet_encoding: Optional[PacketAddrType] = field(default_factory=PacketAddrType)
+@dataclass(slots=True)
+class Server:
+    policyManager: Optional[Manager] = field(default_factory=Manager)
+    validator: Optional[Validator] = field(default_factory=Validator)
+    fallbacks: Optional[dict[string]map[string, Fallback]] = field(default_factory=dict[string]map[string, Fallback])
+    packetEncoding: Optional[PacketAddrType] = field(default_factory=PacketAddrType)

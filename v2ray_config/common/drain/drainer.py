@@ -6,7 +6,7 @@ from typing import Optional
 
 @dataclass(slots=True)
 class BehaviorSeedLimitedDrainer:
-    drain_size: Optional[int] = None
+    drainSize: Optional[int] = None
 
 
 @dataclass(slots=True)

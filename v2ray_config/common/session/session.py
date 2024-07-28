@@ -27,17 +27,17 @@ class Outbound:
 
 @dataclass(slots=True)
 class SniffingRequest:
-    override_destination_for_protocol: Optional[list[str]] = field(default_factory=list[str])
+    overrideDestinationForProtocol: Optional[list[str]] = field(default_factory=list[str])
     enabled: Optional[bool] = None
-    metadata_only: Optional[bool] = None
+    metadataOnly: Optional[bool] = None
 
 
 @dataclass(slots=True)
 class Content:
     protocol: Optional[str] = None
-    sniffing_request: Optional[SniffingRequest] = field(default_factory=SniffingRequest)
+    sniffingRequest: Optional[SniffingRequest] = field(default_factory=SniffingRequest)
     attributes: Optional[dict[str, str]] = field(default_factory=dict[str, str])
-    skip_dns_resolve: Optional[bool] = None
+    skipDNSResolve: Optional[bool] = None
 
 
 @dataclass(slots=True)

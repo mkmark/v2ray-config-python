@@ -8,4 +8,4 @@ from typing import Optional
 @dataclass(slots=True)
 class pingClient:
     destination: Optional[str] = None
-    http_client: Optional[Client] = field(default_factory=Client)
+    httpClient: Optional[Client] = field(default_factory=Client)

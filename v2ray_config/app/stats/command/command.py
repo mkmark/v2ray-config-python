@@ -10,9 +10,9 @@ from typing import Optional
 @dataclass(slots=True)
 class statsServer:
     stats: Optional[Manager] = field(default_factory=Manager)
-    start_time: Optional[Time] = field(default_factory=Time)
+    startTime: Optional[Time] = field(default_factory=Time)
 
 
 @dataclass(slots=True)
 class service:
-    stats_manager: Optional[Manager] = field(default_factory=Manager)
+    statsManager: Optional[Manager] = field(default_factory=Manager)

@@ -6,5 +6,5 @@ from typing import Optional
 
 @dataclass(slots=True)
 class ConverterRegistry:
-    known_converters: Optional[dict[str, Converter]] = field(default_factory=dict[str, Converter])
+    knownConverters: Optional[dict[str, Converter]] = field(default_factory=dict[str, Converter])
     parent: Optional[ConverterRegistry] = field(default_factory=ConverterRegistry)

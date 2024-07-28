@@ -8,7 +8,7 @@ from typing import Optional
 @dataclass(slots=True)
 class Instance(RWMutex):
     config: Optional[Config] = field(default_factory=Config)
-    access_logger: Optional[Handler] = field(default_factory=Handler)
-    error_logger: Optional[Handler] = field(default_factory=Handler)
+    accessLogger: Optional[Handler] = field(default_factory=Handler)
+    errorLogger: Optional[Handler] = field(default_factory=Handler)
     followers: Optional[dict[Value, func(msg]] = field(default_factory=dict[Value, func(msg])
     active: Optional[bool] = None

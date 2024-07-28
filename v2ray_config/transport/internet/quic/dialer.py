@@ -10,7 +10,7 @@ from typing import Optional
 
 @dataclass(slots=True)
 class connectionContext:
-    raw_conn: Optional[sysConn] = field(default_factory=sysConn)
+    rawConn: Optional[sysConn] = field(default_factory=sysConn)
     conn: Optional[Connection] = field(default_factory=Connection)
 
 

@@ -5,8 +5,8 @@ from typing import Optional
 @dataclass(slots=True)
 class ReplayFilter:
     lock: Optional[Mutex] = field(default_factory=Mutex)
-    pool_a: Optional[Filter] = field(default_factory=Filter)
-    pool_b: Optional[Filter] = field(default_factory=Filter)
-    pool_swap: Optional[bool] = None
-    last_swap: Optional[int] = None
+    poolA: Optional[Filter] = field(default_factory=Filter)
+    poolB: Optional[Filter] = field(default_factory=Filter)
+    poolSwap: Optional[bool] = None
+    lastSwap: Optional[int] = None
     interval: Optional[int] = None

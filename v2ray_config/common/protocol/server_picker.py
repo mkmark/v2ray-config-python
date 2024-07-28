@@ -10,4 +10,4 @@ class ServerList(RWMutex):
 @dataclass(slots=True)
 class RoundRobinServerPicker(Mutex):
     serverlist: Optional[ServerList] = field(default_factory=ServerList)
-    next_index: Optional[int] = None
+    nextIndex: Optional[int] = None

@@ -9,10 +9,10 @@ from typing import Optional
 
 @dataclass(slots=True)
 class Holder:
-    domain_to_ip: Optional[Lru] = field(default_factory=Lru)
-    next_ip: Optional[Int] = field(default_factory=Int)
+    domainToIP: Optional[Lru] = field(default_factory=Lru)
+    nextIP: Optional[Int] = field(default_factory=Int)
     mu: Optional[Mutex] = field(default_factory=Mutex)
-    ip_range: Optional[IPNet] = field(default_factory=IPNet)
+    ipRange: Optional[IPNet] = field(default_factory=IPNet)
     config: Optional[FakeDnsPool] = field(default_factory=FakeDnsPool)
 
 

@@ -17,10 +17,10 @@ from typing import Optional
 # import v2ray_config.transport.internet.udp as udp
 
 
-# @dataclass(slots=True)
-# class Client:
-#     server_picker: Optional[ServerPicker] = field(default_factory=ServerPicker)
-#     policy_manager: Optional[Manager] = field(default_factory=Manager)
-#     version: Optional[Version] = field(default_factory=Version)
-#     dns: Optional[Client] = field(default_factory=Client)
-#     delay_auth_write: Optional[bool] = None
+@dataclass(slots=True)
+class Client:
+    serverPicker: Optional[ServerPicker] = field(default_factory=ServerPicker)
+    policyManager: Optional[Manager] = field(default_factory=Manager)
+    version: Optional[Version] = field(default_factory=Version)
+    dns: Optional[Client] = field(default_factory=Client)
+    delayAuthWrite: Optional[bool] = None

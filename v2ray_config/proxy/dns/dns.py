@@ -15,18 +15,18 @@ from typing import Optional
 # import v2ray_config.transport.internet as internet
 
 
-# @dataclass(slots=True)
-# class Handler:
-#     client: Optional[Client] = field(default_factory=Client)
-#     ipv_4_lookup: Optional[IPv4Lookup] = field(default_factory=IPv4Lookup)
-#     ipv_6_lookup: Optional[IPv6Lookup] = field(default_factory=IPv6Lookup)
-#     own_link_verifier: Optional[ownLinkVerifier] = field(default_factory=ownLinkVerifier)
-#     server: Optional[Destination] = field(default_factory=Destination)
-#     timeout: Optional[str] = None
+@dataclass(slots=True)
+class Handler:
+    client: Optional[Client] = field(default_factory=Client)
+    ipv4Lookup: Optional[IPv4Lookup] = field(default_factory=IPv4Lookup)
+    ipv6Lookup: Optional[IPv6Lookup] = field(default_factory=IPv6Lookup)
+    ownLinkVerifier: Optional[ownLinkVerifier] = field(default_factory=ownLinkVerifier)
+    server: Optional[Destination] = field(default_factory=Destination)
+    timeout: Optional[str] = None
 
 
-# @dataclass(slots=True)
-# class outboundConn:
-#     access: Optional[Mutex] = field(default_factory=Mutex)
-#     conn: Optional[Conn] = field(default_factory=Conn)
-#     conn_ready: Optional[chan] = field(default_factory=chan)
+@dataclass(slots=True)
+class outboundConn:
+    access: Optional[Mutex] = field(default_factory=Mutex)
+    conn: Optional[Conn] = field(default_factory=Conn)
+    connReady: Optional[chan] = field(default_factory=chan)

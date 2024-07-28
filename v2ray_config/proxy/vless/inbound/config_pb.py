@@ -1,8 +1,6 @@
 from pydantic.dataclasses import dataclass, Field as field
 from typing import Optional
 
-from v2ray_config.common.protocol.user_pb import User
-
 # import v2ray_config.common.protocol as protocol
 # import v2ray_config.common.protoext as protoext
 

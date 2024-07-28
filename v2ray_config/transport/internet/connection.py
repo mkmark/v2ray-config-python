@@ -7,5 +7,5 @@ from typing import Optional
 
 @dataclass(slots=True)
 class StatCouterConnection(Connection):
-    read_counter: Optional[Counter] = field(default_factory=Counter)
-    write_counter: Optional[Counter] = field(default_factory=Counter)
+    readCounter: Optional[Counter] = field(default_factory=Counter)
+    writeCounter: Optional[Counter] = field(default_factory=Counter)

@@ -18,7 +18,7 @@ class HealthPing:
     ctx: Optional[Context] = field(default_factory=Context)
     access: Optional[Mutex] = field(default_factory=Mutex)
     ticker: Optional[Ticker] = field(default_factory=Ticker)
-    ticker_close: Optional[chan] = field(default_factory=chan)
+    tickerClose: Optional[chan] = field(default_factory=chan)
     settings: Optional[HealthPingSettings] = field(default_factory=HealthPingSettings)
     results: Optional[dict[str, HealthPingRTTS]] = field(default_factory=dict[str, HealthPingRTTS])
 

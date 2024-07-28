@@ -18,7 +18,7 @@ class HealthPingRTTS:
     cap: Optional[int] = None
     validity: Optional[str] = None
     rtts: Optional[list[pingRTT]] = field(default_factory=list[pingRTT])
-    last_update_at: Optional[Time] = field(default_factory=Time)
+    lastUpdateAt: Optional[Time] = field(default_factory=Time)
     stats: Optional[HealthPingStats] = field(default_factory=HealthPingStats)
 
 

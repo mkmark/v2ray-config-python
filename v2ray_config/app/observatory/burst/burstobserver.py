@@ -12,7 +12,7 @@ from typing import Optional
 class Observer:
     config: Optional[Config] = field(default_factory=Config)
     ctx: Optional[Context] = field(default_factory=Context)
-    status_lock: Optional[Mutex] = field(default_factory=Mutex)
+    statusLock: Optional[Mutex] = field(default_factory=Mutex)
     hp: Optional[HealthPing] = field(default_factory=HealthPing)
     finished: Optional[Instance] = field(default_factory=Instance)
     ohm: Optional[Manager] = field(default_factory=Manager)

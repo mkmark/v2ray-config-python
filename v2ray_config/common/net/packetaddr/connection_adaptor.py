@@ -9,13 +9,13 @@ from typing import Optional
 # import v2ray_config.transport as transport
 
 
-# @dataclass(slots=True)
-# class packetConnectionAdaptor:
-#     reader_access: Optional[Mutex] = field(default_factory=Mutex)
-#     reader_buffer: Optional[MultiBuffer] = field(default_factory=MultiBuffer)
-#     link: Optional[Link] = field(default_factory=Link)
+@dataclass(slots=True)
+class packetConnectionAdaptor:
+    readerAccess: Optional[Mutex] = field(default_factory=Mutex)
+    readerBuffer: Optional[MultiBuffer] = field(default_factory=MultiBuffer)
+    link: Optional[Link] = field(default_factory=Link)
 
 
-# @dataclass(slots=True)
-# class packetConnWrapper(PacketConn):
-#     pass
+@dataclass(slots=True)
+class packetConnWrapper(PacketConn):
+    pass

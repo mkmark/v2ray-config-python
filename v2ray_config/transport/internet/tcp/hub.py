@@ -12,7 +12,7 @@ from typing import Optional
 @dataclass(slots=True)
 class Listener:
     listener: Optional[Listener] = field(default_factory=Listener)
-    tls_config: Optional[Config] = field(default_factory=Config)
-    auth_config: Optional[ConnectionAuthenticator] = field(default_factory=ConnectionAuthenticator)
+    tlsConfig: Optional[Config] = field(default_factory=Config)
+    authConfig: Optional[ConnectionAuthenticator] = field(default_factory=ConnectionAuthenticator)
     config: Optional[Config] = field(default_factory=Config)
-    add_conn: Optional[ConnHandler] = field(default_factory=ConnHandler)
+    addConn: Optional[ConnHandler] = field(default_factory=ConnHandler)

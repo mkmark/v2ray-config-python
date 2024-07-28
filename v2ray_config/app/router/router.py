@@ -13,7 +13,7 @@ from typing import Optional
 
 @dataclass(slots=True)
 class Router:
-    domain_strategy: Optional[DomainStrategy] = field(default_factory=DomainStrategy)
+    domainStrategy: Optional[DomainStrategy] = field(default_factory=DomainStrategy)
     rules: Optional[list[Rule]] = field(default_factory=list[Rule])
     balancers: Optional[dict[str, Balancer]] = field(default_factory=dict[str, Balancer])
     dns: Optional[Client] = field(default_factory=Client)
@@ -21,5 +21,5 @@ class Router:
 
 @dataclass(slots=True)
 class Route(Context):
-    outbound_group_tags: Optional[list[str]] = field(default_factory=list[str])
-    outbound_tag: Optional[str] = None
+    outboundGroupTags: Optional[list[str]] = field(default_factory=list[str])
+    outboundTag: Optional[str] = None

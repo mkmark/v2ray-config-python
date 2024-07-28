@@ -20,7 +20,7 @@ class DataSegment:
     option: Optional[SegmentOption] = field(default_factory=SegmentOption)
     timestamp: Optional[int] = None
     number: Optional[int] = None
-    sending_next: Optional[int] = None
+    sendingNext: Optional[int] = None
     payload: Optional[Buffer] = field(default_factory=Buffer)
     timeout: Optional[int] = None
     transmit: Optional[int] = None
@@ -30,10 +30,10 @@ class DataSegment:
 class AckSegment:
     conv: Optional[int] = None
     option: Optional[SegmentOption] = field(default_factory=SegmentOption)
-    receiving_window: Optional[int] = None
-    receiving_next: Optional[int] = None
+    receivingWindow: Optional[int] = None
+    receivingNext: Optional[int] = None
     timestamp: Optional[int] = None
-    number_list: Optional[list[int]] = field(default_factory=list[int])
+    numberList: Optional[list[int]] = field(default_factory=list[int])
 
 
 @dataclass(slots=True)
@@ -41,6 +41,6 @@ class CmdOnlySegment:
     conv: Optional[int] = None
     cmd: Optional[Command] = field(default_factory=Command)
     option: Optional[SegmentOption] = field(default_factory=SegmentOption)
-    sending_next: Optional[int] = None
-    receiving_next: Optional[int] = None
-    peer_rto: Optional[int] = None
+    sendingNext: Optional[int] = None
+    receivingNext: Optional[int] = None
+    peerRTO: Optional[int] = None

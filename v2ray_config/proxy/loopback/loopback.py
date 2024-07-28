@@ -15,4 +15,4 @@ from typing import Optional
 # @dataclass(slots=True)
 # class Loopback:
 #     config: Optional[Config] = field(default_factory=Config)
-#     dispatcher_instance: Optional[Dispatcher] = field(default_factory=Dispatcher)
+#     dispatcherInstance: Optional[Dispatcher] = field(default_factory=Dispatcher)

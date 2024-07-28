@@ -14,7 +14,7 @@ from typing import Optional
 class client:
     tripper: Optional[RoundTripperClient] = field(default_factory=RoundTripperClient)
     assembler: Optional[SessionAssemblerClient] = field(default_factory=SessionAssemblerClient)
-    stream_settings: Optional[MemoryStreamConfig] = field(default_factory=MemoryStreamConfig)
+    streamSettings: Optional[MemoryStreamConfig] = field(default_factory=MemoryStreamConfig)
     dest: Optional[Destination] = field(default_factory=Destination)
 
 

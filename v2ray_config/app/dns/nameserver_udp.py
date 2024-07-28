@@ -20,6 +20,6 @@ class ClassicNameServer(RWMutex):
     ips: Optional[dict[str, record]] = field(default_factory=dict[str, record])
     requests: Optional[dict[int, dnsRequest]] = field(default_factory=dict[int, dnsRequest])
     pub: Optional[Service] = field(default_factory=Service)
-    udp_server: Optional[DispatcherI] = field(default_factory=DispatcherI)
+    udpServer: Optional[DispatcherI] = field(default_factory=DispatcherI)
     cleanup: Optional[Periodic] = field(default_factory=Periodic)
-    req_id: Optional[int] = None
+    reqID: Optional[int] = None

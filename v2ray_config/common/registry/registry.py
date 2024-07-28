@@ -8,7 +8,7 @@ from typing import Optional
 
 @dataclass(slots=True)
 class implementationRegistry:
-    impl_set: Optional[dict[str, implementationSet]] = field(default_factory=dict[str, implementationSet])
+    implSet: Optional[dict[str, implementationSet]] = field(default_factory=dict[str, implementationSet])
 
 
 @dataclass(slots=True)

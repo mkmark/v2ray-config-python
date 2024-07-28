@@ -12,8 +12,8 @@ class Config:
 @dataclass(slots=True)
 class ChannelConfig:
     blocking: Optional[bool] = None
-    subscriber_limit: Optional[int] = None
-    buffer_size: Optional[int] = None
+    subscriberLimit: Optional[int] = None
+    bufferSize: Optional[int] = None
 
 
 @dataclass(slots=True)

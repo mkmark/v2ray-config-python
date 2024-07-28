@@ -6,7 +6,7 @@ from typing import Optional
 
 @dataclass(slots=True)
 class OptionWithALPN:
-    alp_ns: Optional[list[str]] = field(default_factory=list[str])
+    aLPNs: Optional[list[str]] = field(default_factory=list[str])
 
 
 @dataclass(slots=True)

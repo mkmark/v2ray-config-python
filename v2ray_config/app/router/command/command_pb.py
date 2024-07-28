@@ -7,30 +7,30 @@ from typing import Optional
 
 @dataclass(slots=True)
 class RoutingContext:
-    inbound_tag: Optional[str] = None
+    inboundTag: Optional[str] = None
     network: Optional[str] = None
-    source_i_ps: Optional[list[list[int]]] = field(default_factory=list[list[int]])
-    target_i_ps: Optional[list[list[int]]] = field(default_factory=list[list[int]])
-    source_port: Optional[int] = None
-    target_port: Optional[int] = None
-    target_domain: Optional[str] = None
+    sourceIPs: Optional[list[list[int]]] = field(default_factory=list[list[int]])
+    targetIPs: Optional[list[list[int]]] = field(default_factory=list[list[int]])
+    sourcePort: Optional[int] = None
+    targetPort: Optional[int] = None
+    targetDomain: Optional[str] = None
     protocol: Optional[str] = None
     user: Optional[str] = None
     attributes: Optional[dict[str, str]] = field(default_factory=dict[str, str])
-    outbound_group_tags: Optional[list[str]] = field(default_factory=list[str])
-    outbound_tag: Optional[str] = None
+    outboundGroupTags: Optional[list[str]] = field(default_factory=list[str])
+    outboundTag: Optional[str] = None
 
 
 @dataclass(slots=True)
 class SubscribeRoutingStatsRequest:
-    field_selectors: Optional[list[str]] = field(default_factory=list[str])
+    fieldSelectors: Optional[list[str]] = field(default_factory=list[str])
 
 
 @dataclass(slots=True)
 class TestRouteRequest:
-    routing_context: Optional[RoutingContext] = field(default_factory=RoutingContext)
-    field_selectors: Optional[list[str]] = field(default_factory=list[str])
-    publish_result: Optional[bool] = None
+    routingContext: Optional[RoutingContext] = field(default_factory=RoutingContext)
+    fieldSelectors: Optional[list[str]] = field(default_factory=list[str])
+    publishResult: Optional[bool] = None
 
 
 @dataclass(slots=True)
@@ -61,7 +61,7 @@ class GetBalancerInfoResponse:
 
 @dataclass(slots=True)
 class OverrideBalancerTargetRequest:
-    balancer_tag: Optional[str] = None
+    balancerTag: Optional[str] = None
     target: Optional[str] = None
 
 

@@ -14,5 +14,5 @@ class FakeDNSClient(DNS):
 @dataclass(slots=True)
 class FakeDNSEngine:
     dns: Optional[DNS] = field(default_factory=DNS)
-    fake_holders: Optional[HolderMulti] = field(default_factory=HolderMulti)
-    fake_default: Optional[HolderMulti] = field(default_factory=HolderMulti)
+    fakeHolders: Optional[HolderMulti] = field(default_factory=HolderMulti)
+    fakeDefault: Optional[HolderMulti] = field(default_factory=HolderMulti)

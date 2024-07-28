@@ -19,10 +19,10 @@ class AddressTypeParser(func(byte) byte):
 
 @dataclass(slots=True)
 class option:
-    addr_type_map: Optional[AddressFamily] = field(default_factory=AddressFamily)
-    addr_byte_map: Optional[[16]byte] = field(default_factory=[16]byte)
-    port_first: Optional[bool] = None
-    type_parser: Optional[AddressTypeParser] = field(default_factory=AddressTypeParser)
+    addrTypeMap: Optional[AddressFamily] = field(default_factory=AddressFamily)
+    addrByteMap: Optional[[16]byte] = field(default_factory=[16]byte)
+    portFirst: Optional[bool] = None
+    typeParser: Optional[AddressTypeParser] = field(default_factory=AddressTypeParser)
 
 
 @dataclass(slots=True)
@@ -37,6 +37,6 @@ class portLastAddressParser:
 
 @dataclass(slots=True)
 class addressParser:
-    addr_type_map: Optional[AddressFamily] = field(default_factory=AddressFamily)
-    addr_byte_map: Optional[[16]byte] = field(default_factory=[16]byte)
-    type_parser: Optional[AddressTypeParser] = field(default_factory=AddressTypeParser)
+    addrTypeMap: Optional[AddressFamily] = field(default_factory=AddressFamily)
+    addrByteMap: Optional[[16]byte] = field(default_factory=[16]byte)
+    typeParser: Optional[AddressTypeParser] = field(default_factory=AddressTypeParser)

@@ -7,4 +7,4 @@ from typing import Optional
 
 @dataclass(slots=True)
 class EmbeddedHashProtectedLoader:
-    checked_file: Optional[dict[str, str]] = field(default_factory=dict[str, str])
+    checkedFile: Optional[dict[str, str]] = field(default_factory=dict[str, str])

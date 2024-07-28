@@ -22,10 +22,10 @@ from typing import Optional
 # import v2ray_config.transport.internet.tls as tls
 
 
-# @dataclass(slots=True)
-# class Handler:
-#     inbound_handler_manager: Optional[Manager] = field(default_factory=Manager)
-#     policy_manager: Optional[Manager] = field(default_factory=Manager)
-#     validator: Optional[Validator] = field(default_factory=Validator)
-#     dns: Optional[Client] = field(default_factory=Client)
-#     fallbacks: Optional[dict[string]map[string, Fallback]] = field(default_factory=dict[string]map[string, Fallback])
+@dataclass(slots=True)
+class Handler:
+    inboundHandlerManager: Optional[Manager] = field(default_factory=Manager)
+    policyManager: Optional[Manager] = field(default_factory=Manager)
+    validator: Optional[Validator] = field(default_factory=Validator)
+    dns: Optional[Client] = field(default_factory=Client)
+    fallbacks: Optional[dict[string]map[string, Fallback]] = field(default_factory=dict[string]map[string, Fallback])

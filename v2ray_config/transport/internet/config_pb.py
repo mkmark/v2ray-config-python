@@ -37,7 +37,7 @@ class StreamConfig:
 @dataclass(slots=True)
 class ProxyConfig:
     tag: Optional[str] = None
-    transport_layer_proxy: Optional[bool] = None
+    transportLayerProxy: Optional[bool] = None
 
 
 @dataclass(slots=True)

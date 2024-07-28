@@ -12,7 +12,7 @@ from typing import Optional
 @dataclass(slots=True)
 class VMessAccount:
     id: Optional[str] = None
-    alter_id: Optional[int] = None
+    alterId: Optional[int] = None
     security: Optional[str] = None
     experiments: Optional[str] = None
 
@@ -29,7 +29,7 @@ class FeaturesConfig:
 
 @dataclass(slots=True)
 class VMessDefaultConfig:
-    alter_id: Optional[int] = None
+    alterId: Optional[int] = None
     level: Optional[int] = None
 
 
@@ -39,7 +39,7 @@ class VMessInboundConfig:
     features: Optional[FeaturesConfig] = field(default_factory=FeaturesConfig)
     default: Optional[VMessDefaultConfig] = field(default_factory=VMessDefaultConfig)
     detour: Optional[VMessDetourConfig] = field(default_factory=VMessDetourConfig)
-    disable_insecure_encryption: Optional[bool] = None
+    disableInsecureEncryption: Optional[bool] = None
 
 
 @dataclass(slots=True)

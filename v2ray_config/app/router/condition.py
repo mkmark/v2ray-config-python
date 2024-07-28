@@ -20,13 +20,13 @@ class DomainMatcher:
 @dataclass(slots=True)
 class MultiGeoIPMatcher:
     matchers: Optional[list[GeoIPMatcher]] = field(default_factory=list[GeoIPMatcher])
-    on_source: Optional[bool] = None
+    onSource: Optional[bool] = None
 
 
 @dataclass(slots=True)
 class PortMatcher:
     port: Optional[MemoryPortList] = field(default_factory=MemoryPortList)
-    on_source: Optional[bool] = None
+    onSource: Optional[bool] = None
 
 
 @dataclass(slots=True)

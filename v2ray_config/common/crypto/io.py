@@ -14,4 +14,4 @@ class CryptionReader:
 class CryptionWriter:
     stream: Optional[Stream] = field(default_factory=Stream)
     writer: Optional[Writer] = field(default_factory=Writer)
-    buf_writer: Optional[Writer] = field(default_factory=Writer)
+    bufWriter: Optional[Writer] = field(default_factory=Writer)

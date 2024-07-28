@@ -26,7 +26,7 @@ class resolution:
 class Instance:
     access: Optional[Mutex] = field(default_factory=Mutex)
     features: Optional[list[Feature]] = field(default_factory=list[Feature])
-    feature_resolutions: Optional[list[resolution]] = field(default_factory=list[resolution])
+    featureResolutions: Optional[list[resolution]] = field(default_factory=list[resolution])
     running: Optional[bool] = None
     env: Optional[RootEnvironment] = field(default_factory=RootEnvironment)
     ctx: Optional[Context] = field(default_factory=Context)

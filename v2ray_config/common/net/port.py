@@ -8,11 +8,11 @@ class Port(int):
 
 
 @dataclass(slots=True)
-class MemoryPortRange:
-    from_: Optional[int] = None
-    to: Optional[int] = None
+class MemoryPortList(list[MemoryPortRange]):
+    pass
 
 
 @dataclass(slots=True)
-class MemoryPortList(list[MemoryPortRange]):
-    pass
+class MemoryPortRange:
+    from_: Optional[int] = None
+    to: Optional[int] = None

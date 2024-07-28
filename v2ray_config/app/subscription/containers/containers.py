@@ -4,7 +4,7 @@ from typing import Optional
 
 @dataclass(slots=True)
 class UnparsedServerConf:
-    kind_hint: Optional[str] = None
+    kindHint: Optional[str] = None
     content: Optional[list[int]] = field(default_factory=list[int])
 
 
@@ -12,4 +12,4 @@ class UnparsedServerConf:
 class Container:
     kind: Optional[str] = None
     metadata: Optional[dict[str, str]] = field(default_factory=dict[str, str])
-    server_specs: Optional[list[UnparsedServerConf]] = field(default_factory=list[UnparsedServerConf])
+    serverSpecs: Optional[list[UnparsedServerConf]] = field(default_factory=list[UnparsedServerConf])

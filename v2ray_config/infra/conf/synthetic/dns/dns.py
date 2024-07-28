@@ -19,16 +19,16 @@ from v2ray_config.infra.conf.synthetic.dns.fakedns import (
 @dataclass(slots=True)
 class NameServerConfig:
     address: Optional[str] = None
-    client_ip: Optional[str] = None
+    clientIP: Optional[str] = None
     port: Optional[int] = None
     tag: Optional[str] = None
-    query_strategy: Optional[str] = None
-    cache_strategy: Optional[str] = None
-    fallback_strategy: Optional[str] = None
-    skip_fallback: Optional[bool] = None
+    queryStrategy: Optional[str] = None
+    cacheStrategy: Optional[str] = None
+    fallbackStrategy: Optional[str] = None
+    skipFallback: Optional[bool] = None
     domains: Optional[list[str]] = field(default_factory=list[str])
-    expect_i_ps: Optional[list[str]] = field(default_factory=list[str])
-    fake_dns: Optional[FakeDNSConfigExtend] = field(default_factory=FakeDNSConfigExtend)
+    expectIPs: Optional[list[str]] = field(default_factory=list[str])
+    fakeDNS: Optional[FakeDNSConfigExtend] = field(default_factory=FakeDNSConfigExtend)
 
 
 @dataclass(slots=True)
@@ -46,12 +46,12 @@ class DNSConfig:
         default_factory=dict[str, HostAddress]
     )
     fakedns: Optional[FakeDNSConfig] = field(default_factory=FakeDNSConfig)
-    domain_matcher: Optional[str] = None
-    client_ip: Optional[str] = None
+    domainMatcher: Optional[str] = None
+    clientIp: Optional[str] = None
     tag: Optional[str] = None
-    query_strategy: Optional[str] = None
-    cache_strategy: Optional[str] = None
-    fallback_strategy: Optional[str] = None
-    disable_cache: Optional[bool] = None
-    disable_fallback: Optional[bool] = None
-    disable_fallback_if_match: Optional[bool] = None
+    queryStrategy: Optional[str] = None
+    cacheStrategy: Optional[str] = None
+    fallbackStrategy: Optional[str] = None
+    disableCache: Optional[bool] = None
+    disableFallback: Optional[bool] = None
+    disableFallbackIfMatch: Optional[bool] = None

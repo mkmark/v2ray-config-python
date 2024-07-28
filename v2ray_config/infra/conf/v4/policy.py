@@ -7,21 +7,21 @@ from typing import Optional
 @dataclass(slots=True)
 class Policy:
     handshake: Optional[int] = None
-    conn_idle: Optional[int] = None
-    uplink_only: Optional[int] = None
-    downlink_only: Optional[int] = None
-    stats_user_uplink: Optional[bool] = None
-    stats_user_downlink: Optional[bool] = None
-    buffer_size: Optional[int] = None
+    connIdle: Optional[int] = None
+    uplinkOnly: Optional[int] = None
+    downlinkOnly: Optional[int] = None
+    statsUserUplink: Optional[bool] = None
+    statsUserDownlink: Optional[bool] = None
+    bufferSize: Optional[int] = None
 
 
 @dataclass(slots=True)
 class SystemPolicy:
-    stats_inbound_uplink: Optional[bool] = None
-    stats_inbound_downlink: Optional[bool] = None
-    stats_outbound_uplink: Optional[bool] = None
-    stats_outbound_downlink: Optional[bool] = None
-    override_access_log_dest: Optional[bool] = None
+    statsInboundUplink: Optional[bool] = None
+    statsInboundDownlink: Optional[bool] = None
+    statsOutboundUplink: Optional[bool] = None
+    statsOutboundDownlink: Optional[bool] = None
+    overrideAccessLogDest: Optional[bool] = None
 
 
 @dataclass(slots=True)

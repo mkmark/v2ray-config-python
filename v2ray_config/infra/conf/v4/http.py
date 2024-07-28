@@ -17,8 +17,8 @@ class HTTPAccount:
 class HTTPServerConfig:
     timeout: Optional[int] = None
     accounts: Optional[list[HTTPAccount]] = field(default_factory=list[HTTPAccount])
-    allow_transparent: Optional[bool] = None
-    user_level: Optional[int] = None
+    allowTransparent: Optional[bool] = None
+    userLevel: Optional[int] = None
 
 
 @dataclass(slots=True)

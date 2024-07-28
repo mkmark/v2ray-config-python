@@ -20,12 +20,12 @@ class ConnectionID:
 class Listener(Mutex):
     sessions: Optional[dict[ConnectionID, Connection]] = field(default_factory=dict[ConnectionID, Connection])
     hub: Optional[Hub] = field(default_factory=Hub)
-    tls_config: Optional[Config] = field(default_factory=Config)
+    tlsConfig: Optional[Config] = field(default_factory=Config)
     config: Optional[Config] = field(default_factory=Config)
     reader: Optional[PacketReader] = field(default_factory=PacketReader)
     header: Optional[PacketHeader] = field(default_factory=PacketHeader)
     security: Optional[AEAD] = field(default_factory=AEAD)
-    add_conn: Optional[ConnHandler] = field(default_factory=ConnHandler)
+    addConn: Optional[ConnHandler] = field(default_factory=ConnHandler)
 
 
 @dataclass(slots=True)

@@ -26,19 +26,19 @@ class tcpWorker:
     port: Optional[int] = None
     proxy: Optional[Inbound] = field(default_factory=Inbound)
     stream: Optional[MemoryStreamConfig] = field(default_factory=MemoryStreamConfig)
-    recv_orig_dest: Optional[bool] = None
+    recvOrigDest: Optional[bool] = None
     tag: Optional[str] = None
     dispatcher: Optional[Dispatcher] = field(default_factory=Dispatcher)
-    sniffing_config: Optional[SniffingConfig] = field(default_factory=SniffingConfig)
-    uplink_counter: Optional[Counter] = field(default_factory=Counter)
-    downlink_counter: Optional[Counter] = field(default_factory=Counter)
+    sniffingConfig: Optional[SniffingConfig] = field(default_factory=SniffingConfig)
+    uplinkCounter: Optional[Counter] = field(default_factory=Counter)
+    downlinkCounter: Optional[Counter] = field(default_factory=Counter)
     hub: Optional[Listener] = field(default_factory=Listener)
     ctx: Optional[Context] = field(default_factory=Context)
 
 
 @dataclass(slots=True)
 class udpConn:
-    last_activity_time: Optional[int] = None
+    lastActivityTime: Optional[int] = None
     reader: Optional[Reader] = field(default_factory=Reader)
     writer: Optional[Writer] = field(default_factory=Writer)
     remote: Optional[Addr] = field(default_factory=Addr)
@@ -64,11 +64,11 @@ class udpWorker(RWMutex):
     tag: Optional[str] = None
     stream: Optional[MemoryStreamConfig] = field(default_factory=MemoryStreamConfig)
     dispatcher: Optional[Dispatcher] = field(default_factory=Dispatcher)
-    sniffing_config: Optional[SniffingConfig] = field(default_factory=SniffingConfig)
-    uplink_counter: Optional[Counter] = field(default_factory=Counter)
-    downlink_counter: Optional[Counter] = field(default_factory=Counter)
+    sniffingConfig: Optional[SniffingConfig] = field(default_factory=SniffingConfig)
+    uplinkCounter: Optional[Counter] = field(default_factory=Counter)
+    downlinkCounter: Optional[Counter] = field(default_factory=Counter)
     checker: Optional[Periodic] = field(default_factory=Periodic)
-    active_conn: Optional[dict[connID, udpConn]] = field(default_factory=dict[connID, udpConn])
+    activeConn: Optional[dict[connID, udpConn]] = field(default_factory=dict[connID, udpConn])
     ctx: Optional[Context] = field(default_factory=Context)
 
 
@@ -79,8 +79,8 @@ class dsWorker:
     stream: Optional[MemoryStreamConfig] = field(default_factory=MemoryStreamConfig)
     tag: Optional[str] = None
     dispatcher: Optional[Dispatcher] = field(default_factory=Dispatcher)
-    sniffing_config: Optional[SniffingConfig] = field(default_factory=SniffingConfig)
-    uplink_counter: Optional[Counter] = field(default_factory=Counter)
-    downlink_counter: Optional[Counter] = field(default_factory=Counter)
+    sniffingConfig: Optional[SniffingConfig] = field(default_factory=SniffingConfig)
+    uplinkCounter: Optional[Counter] = field(default_factory=Counter)
+    downlinkCounter: Optional[Counter] = field(default_factory=Counter)
     hub: Optional[Listener] = field(default_factory=Listener)
     ctx: Optional[Context] = field(default_factory=Context)

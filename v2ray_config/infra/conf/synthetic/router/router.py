@@ -14,7 +14,7 @@ from v2ray_config.infra.conf.rule.rule import RawFieldRule
 @dataclass(slots=True)
 class RouterRulesConfig:
     rules: Optional[list[dict]] = field(default_factory=list[dict])
-    domain_strategy: Optional[str] = None
+    domainStrategy: Optional[str] = None
 
 
 @dataclass(slots=True)
@@ -28,15 +28,15 @@ class BalancingRule:
     tag: Optional[str] = None
     selector: Optional[list[str]] = field(default_factory=list[str])
     strategy: Optional[StrategyConfig] = field(default_factory=StrategyConfig)
-    fallback_tag: Optional[str] = None
+    fallbackTag: Optional[str] = None
 
 
 @dataclass(slots=True)
 class RouterConfig:
     settings: Optional[RouterRulesConfig] = field(default_factory=RouterRulesConfig)
-    rules: Optional[list[RawFieldRule]] = field(default_factory=list[RawFieldRule])
-    domain_strategy: Optional[str] = None
+    rules: Optional[list[RawFieldRule]] = field(default_factory=list[dict])
+    domainStrategy: Optional[str] = None
     balancers: Optional[list[BalancingRule]] = field(
         default_factory=list[BalancingRule]
     )
-    domain_matcher: Optional[str] = None
+    domainMatcher: Optional[str] = None

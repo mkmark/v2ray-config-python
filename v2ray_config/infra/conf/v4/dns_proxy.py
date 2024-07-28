@@ -11,4 +11,4 @@ class DNSOutboundConfig:
     network: Optional[str] = None
     address: Optional[str] = None
     port: Optional[int] = None
-    user_level: Optional[int] = None
+    userLevel: Optional[int] = None

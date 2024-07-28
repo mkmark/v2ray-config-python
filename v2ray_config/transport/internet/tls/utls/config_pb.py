@@ -14,7 +14,7 @@ class ForcedALPN(int):
 class Config:
     tls_config: Optional[Config] = field(default_factory=Config)
     imitate: Optional[str] = None
-    no_sni: Optional[bool] = None
+    noSNI: Optional[bool] = None
     force_alpn: Optional[ForcedALPN] = field(default_factory=ForcedALPN)
 
 

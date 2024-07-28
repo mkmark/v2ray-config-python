@@ -17,7 +17,7 @@ class Bridge:
     tag: Optional[str] = None
     domain: Optional[str] = None
     workers: Optional[list[BridgeWorker]] = field(default_factory=list[BridgeWorker])
-    monitor_task: Optional[Periodic] = field(default_factory=Periodic)
+    monitorTask: Optional[Periodic] = field(default_factory=Periodic)
 
 
 @dataclass(slots=True)

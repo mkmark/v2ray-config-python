@@ -17,20 +17,20 @@ from typing import Optional
 # import v2ray_config.transport.internet.tls as tls
 
 
-# @dataclass(slots=True)
-# class Client:
-#     server_picker: Optional[ServerPicker] = field(default_factory=ServerPicker)
-#     policy_manager: Optional[Manager] = field(default_factory=Manager)
-#     h_1_skip_wait_for_reply: Optional[bool] = None
+@dataclass(slots=True)
+class Client:
+    serverPicker: Optional[ServerPicker] = field(default_factory=ServerPicker)
+    policyManager: Optional[Manager] = field(default_factory=Manager)
+    h1SkipWaitForReply: Optional[bool] = None
 
 
-# @dataclass(slots=True)
-# class h2Conn:
-#     raw_conn: Optional[Conn] = field(default_factory=Conn)
-#     h_2_conn: Optional[ClientConn] = field(default_factory=ClientConn)
+@dataclass(slots=True)
+class h2Conn:
+    rawConn: Optional[Conn] = field(default_factory=Conn)
+    h2Conn: Optional[ClientConn] = field(default_factory=ClientConn)
 
 
-# @dataclass(slots=True)
-# class http2Conn(Conn):
-#     in: Optional[PipeWriter] = field(default_factory=PipeWriter)
-#     out: Optional[ReadCloser] = field(default_factory=ReadCloser)
+@dataclass(slots=True)
+class http2Conn(Conn):
+    in: Optional[PipeWriter] = field(default_factory=PipeWriter)
+    out: Optional[ReadCloser] = field(default_factory=ReadCloser)

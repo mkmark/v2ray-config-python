@@ -14,6 +14,6 @@ from typing import Optional
 class TUN:
     ctx: Optional[Context] = field(default_factory=Context)
     dispatcher: Optional[Dispatcher] = field(default_factory=Dispatcher)
-    policy_manager: Optional[Manager] = field(default_factory=Manager)
+    policyManager: Optional[Manager] = field(default_factory=Manager)
     config: Optional[Config] = field(default_factory=Config)
     stack: Optional[Stack] = field(default_factory=Stack)

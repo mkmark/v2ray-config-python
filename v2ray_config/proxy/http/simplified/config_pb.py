@@ -10,11 +10,11 @@ class ServerConfig:
     pass
 
 
-# @dataclass(slots=True)
-# class ClientConfig:
-#     address: Optional[str] = None
-#     port: Optional[int] = None
-#     h1_skip_wait_for_reply: Optional[bool] = None
+@dataclass(slots=True)
+class ClientConfig:
+    address: Optional[str] = None
+    port: Optional[int] = None
+    h1_skip_wait_for_reply: Optional[bool] = None
 
 
 @dataclass(slots=True)

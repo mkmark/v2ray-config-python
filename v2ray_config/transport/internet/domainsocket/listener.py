@@ -11,9 +11,9 @@ from typing import Optional
 class Listener:
     addr: Optional[UnixAddr] = field(default_factory=UnixAddr)
     ln: Optional[Listener] = field(default_factory=Listener)
-    tls_config: Optional[Config] = field(default_factory=Config)
+    tlsConfig: Optional[Config] = field(default_factory=Config)
     config: Optional[Config] = field(default_factory=Config)
-    add_conn: Optional[ConnHandler] = field(default_factory=ConnHandler)
+    addConn: Optional[ConnHandler] = field(default_factory=ConnHandler)
     locker: Optional[fileLocker] = field(default_factory=fileLocker)
 
 

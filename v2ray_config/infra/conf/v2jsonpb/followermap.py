@@ -4,4 +4,4 @@ from typing import Optional
 
 @dataclass(slots=True)
 class V2JsonProtobufMapFollower(Map):
-    value_kind: Optional[FieldDescriptor] = field(default_factory=FieldDescriptor)
+    valueKind: Optional[FieldDescriptor] = field(default_factory=FieldDescriptor)

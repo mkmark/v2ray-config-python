@@ -13,14 +13,14 @@ from typing import Optional
 # import v2ray_config.proxy.vmess.aead as aead
 
 
-# @dataclass(slots=True)
-# class ClientSession:
-#     is_aead: Optional[bool] = None
-#     id_hash: Optional[IDHash] = field(default_factory=IDHash)
-#     request_body_key: Optional[[16]byte] = field(default_factory=[16]byte)
-#     request_body_iv: Optional[[16]byte] = field(default_factory=[16]byte)
-#     response_body_key: Optional[[16]byte] = field(default_factory=[16]byte)
-#     response_body_iv: Optional[[16]byte] = field(default_factory=[16]byte)
-#     response_reader: Optional[Reader] = field(default_factory=Reader)
-#     response_header: Optional[int] = None
-#     read_drainer: Optional[Drainer] = field(default_factory=Drainer)
+@dataclass(slots=True)
+class ClientSession:
+    isAEAD: Optional[bool] = None
+    idHash: Optional[IDHash] = field(default_factory=IDHash)
+    requestBodyKey: Optional[[16]byte] = field(default_factory=[16]byte)
+    requestBodyIV: Optional[[16]byte] = field(default_factory=[16]byte)
+    responseBodyKey: Optional[[16]byte] = field(default_factory=[16]byte)
+    responseBodyIV: Optional[[16]byte] = field(default_factory=[16]byte)
+    responseReader: Optional[Reader] = field(default_factory=Reader)
+    responseHeader: Optional[int] = None
+    readDrainer: Optional[Drainer] = field(default_factory=Drainer)

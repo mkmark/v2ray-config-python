@@ -14,15 +14,15 @@ from v2ray_config.infra.conf.synthetic.router.router_strategy import HealthCheck
 
 @dataclass(slots=True)
 class ObservatoryConfig:
-    subject_selector: Optional[list[str]] = field(default_factory=list[str])
-    probe_url: Optional[str] = None
-    probe_interval: Optional[str] = None
+    subjectSelector: Optional[list[str]] = field(default_factory=list[str])
+    probeURL: Optional[str] = None
+    probeInterval: Optional[str] = None
 
 
 @dataclass(slots=True)
 class BurstObservatoryConfig:
-    subject_selector: Optional[list[str]] = field(default_factory=list[str])
-    ping_config: Optional[HealthCheckSettings] = field(
+    subjectSelector: Optional[list[str]] = field(default_factory=list[str])
+    pingConfig: Optional[HealthCheckSettings] = field(
         default_factory=HealthCheckSettings
     )
 

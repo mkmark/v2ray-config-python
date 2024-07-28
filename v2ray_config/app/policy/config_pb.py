@@ -10,22 +10,17 @@ class Second:
 
 
 @dataclass(slots=True)
-class Policy:
-    timeout: Optional[Policy_Timeout] = field(default_factory=Policy_Timeout)
-    stats: Optional[Policy_Stats] = field(default_factory=Policy_Stats)
-    buffer: Optional[Policy_Buffer] = field(default_factory=Policy_Buffer)
+class SystemPolicy_Stats:
+    inbound_uplink: Optional[bool] = None
+    inbound_downlink: Optional[bool] = None
+    outbound_uplink: Optional[bool] = None
+    outbound_downlink: Optional[bool] = None
 
 
 @dataclass(slots=True)
 class SystemPolicy:
     stats: Optional[SystemPolicy_Stats] = field(default_factory=SystemPolicy_Stats)
     override_access_log_dest: Optional[bool] = None
-
-
-@dataclass(slots=True)
-class Config:
-    level: Optional[dict[int, Policy]] = field(default_factory=dict[int, Policy])
-    system: Optional[SystemPolicy] = field(default_factory=SystemPolicy)
 
 
 @dataclass(slots=True)
@@ -48,11 +43,16 @@ class Policy_Buffer:
 
 
 @dataclass(slots=True)
-class SystemPolicy_Stats:
-    inbound_uplink: Optional[bool] = None
-    inbound_downlink: Optional[bool] = None
-    outbound_uplink: Optional[bool] = None
-    outbound_downlink: Optional[bool] = None
+class Policy:
+    timeout: Optional[Policy_Timeout] = field(default_factory=Policy_Timeout)
+    stats: Optional[Policy_Stats] = field(default_factory=Policy_Stats)
+    buffer: Optional[Policy_Buffer] = field(default_factory=Policy_Buffer)
+
+
+@dataclass(slots=True)
+class Config:
+    level: Optional[dict[int, Policy]] = field(default_factory=dict[int, Policy])
+    system: Optional[SystemPolicy] = field(default_factory=SystemPolicy)
 
 
 @dataclass(slots=True)

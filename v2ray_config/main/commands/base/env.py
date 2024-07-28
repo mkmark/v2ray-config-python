@@ -5,4 +5,4 @@ from typing import Optional
 @dataclass(slots=True)
 class CommandEnvHolder:
     exec: Optional[str] = None
-    commands_width: Optional[int] = None
+    commandsWidth: Optional[int] = None

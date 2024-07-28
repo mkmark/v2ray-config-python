@@ -9,5 +9,5 @@ from typing import Optional
 
 @dataclass(slots=True)
 class server:
-    add_conn: Optional[ConnHandler] = field(default_factory=ConnHandler)
-    innner_listener: Optional[Listener] = field(default_factory=Listener)
+    addConn: Optional[ConnHandler] = field(default_factory=ConnHandler)
+    innnerListener: Optional[Listener] = field(default_factory=Listener)

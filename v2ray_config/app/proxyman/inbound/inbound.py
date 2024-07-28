@@ -12,6 +12,6 @@ from typing import Optional
 class Manager:
     ctx: Optional[Context] = field(default_factory=Context)
     access: Optional[RWMutex] = field(default_factory=RWMutex)
-    untagged_handler: Optional[list[Handler]] = field(default_factory=list[Handler])
-    tagged_handlers: Optional[dict[str, Handler]] = field(default_factory=dict[str, Handler])
+    untaggedHandler: Optional[list[Handler]] = field(default_factory=list[Handler])
+    taggedHandlers: Optional[dict[str, Handler]] = field(default_factory=dict[str, Handler])
     running: Optional[bool] = None

@@ -13,10 +13,10 @@ class simpleAssemblerServer:
 
 @dataclass(slots=True)
 class simpleAssemblerServerSession:
-    max_write_size: Optional[int] = None
-    read_buffer: Optional[Buffer] = field(default_factory=Buffer)
-    read_chan: Optional[chan] = field(default_factory=chan)
-    request_processed: Optional[chan] = field(default_factory=chan)
-    write_lock: Optional[Mutex] = field(default_factory=Mutex)
-    write_buffer: Optional[Buffer] = field(default_factory=Buffer)
+    maxWriteSize: Optional[int] = None
+    readBuffer: Optional[Buffer] = field(default_factory=Buffer)
+    readChan: Optional[chan] = field(default_factory=chan)
+    requestProcessed: Optional[chan] = field(default_factory=chan)
+    writeLock: Optional[Mutex] = field(default_factory=Mutex)
+    writeBuffer: Optional[Buffer] = field(default_factory=Buffer)
     ctx: Optional[Context] = field(default_factory=Context)

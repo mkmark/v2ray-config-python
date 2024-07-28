@@ -13,7 +13,7 @@ class ExportOption(func(*ExportOptionHolder)):
 
 @dataclass(slots=True)
 class Error:
-    path_obj: Optional[dict] = field(default_factory=dict)
+    pathObj: Optional[dict] = field(default_factory=dict)
     prefix: Optional[list[dict]] = field(default_factory=list[dict])
     message: Optional[list[dict]] = field(default_factory=list[dict])
     inner: Optional[error] = field(default_factory=error)
@@ -22,4 +22,4 @@ class Error:
 
 @dataclass(slots=True)
 class ExportOptionHolder:
-    session_id: Optional[int] = None
+    sessionID: Optional[int] = None

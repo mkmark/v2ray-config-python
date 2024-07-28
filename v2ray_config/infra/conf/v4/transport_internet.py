@@ -30,11 +30,11 @@ class TransportProtocol(str):
 class KCPConfig:
     mtu: Optional[int] = None
     tti: Optional[int] = None
-    uplink_capacity: Optional[int] = None
-    downlink_capacity: Optional[int] = None
+    uplinkCapacity: Optional[int] = None
+    downlinkCapacity: Optional[int] = None
     congestion: Optional[bool] = None
-    read_buffer_size: Optional[int] = None
-    write_buffer_size: Optional[int] = None
+    readBufferSize: Optional[int] = None
+    writeBufferSize: Optional[int] = None
     header: Optional[dict] = field(default_factory=dict)
     seed: Optional[str] = None
 
@@ -42,17 +42,17 @@ class KCPConfig:
 @dataclass(slots=True)
 class TCPConfig:
     header: Optional[dict] = field(default_factory=dict)
-    accept_proxy_protocol: Optional[bool] = None
+    acceptProxyProtocol: Optional[bool] = None
 
 
 @dataclass(slots=True)
 class WebSocketConfig:
     path: Optional[str] = None
     headers: Optional[dict[str, str]] = field(default_factory=dict[str, str])
-    accept_proxy_protocol: Optional[bool] = None
-    max_early_data: Optional[int] = None
-    use_browser_forwarding: Optional[bool] = None
-    early_data_header_name: Optional[str] = None
+    acceptProxyProtocol: Optional[bool] = None
+    maxEarlyData: Optional[int] = None
+    useBrowserForwarding: Optional[bool] = None
+    earlyDataHeaderName: Optional[str] = None
 
 
 @dataclass(slots=True)
@@ -83,15 +83,13 @@ class DomainSocketConfig:
 class StreamConfig:
     network: Optional[str] = None
     security: Optional[str] = None
-    tls_settings: Optional[TLSConfig] = field(default_factory=TLSConfig)
-    tcp_settings: Optional[TCPConfig] = field(default_factory=TCPConfig)
-    kcp_settings: Optional[KCPConfig] = field(default_factory=KCPConfig)
-    ws_settings: Optional[WebSocketConfig] = field(default_factory=WebSocketConfig)
-    http_settings: Optional[HTTPConfig] = field(default_factory=HTTPConfig)
-    ds_settings: Optional[DomainSocketConfig] = field(
-        default_factory=DomainSocketConfig
-    )
-    quic_settings: Optional[QUICConfig] = field(default_factory=QUICConfig)
-    gun_settings: Optional[GunConfig] = field(default_factory=GunConfig)
-    grpc_settings: Optional[GunConfig] = field(default_factory=GunConfig)
+    tlsSettings: Optional[TLSConfig] = field(default_factory=TLSConfig)
+    tcpSettings: Optional[TCPConfig] = field(default_factory=TCPConfig)
+    kcpSettings: Optional[KCPConfig] = field(default_factory=KCPConfig)
+    wsSettings: Optional[WebSocketConfig] = field(default_factory=WebSocketConfig)
+    httpSettings: Optional[HTTPConfig] = field(default_factory=HTTPConfig)
+    dsSettings: Optional[DomainSocketConfig] = field(default_factory=DomainSocketConfig)
+    quicSettings: Optional[QUICConfig] = field(default_factory=QUICConfig)
+    gunSettings: Optional[GunConfig] = field(default_factory=GunConfig)
+    grpcSettings: Optional[GunConfig] = field(default_factory=GunConfig)
     sockopt: Optional[SocketConfig] = field(default_factory=SocketConfig)

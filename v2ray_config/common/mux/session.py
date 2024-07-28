@@ -18,5 +18,5 @@ class Session:
     input: Optional[Reader] = field(default_factory=Reader)
     output: Optional[Writer] = field(default_factory=Writer)
     parent: Optional[SessionManager] = field(default_factory=SessionManager)
-    id: Optional[int] = None
-    transfer_type: Optional[TransferType] = field(default_factory=TransferType)
+    iD: Optional[int] = None
+    transferType: Optional[TransferType] = field(default_factory=TransferType)

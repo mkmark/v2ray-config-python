@@ -15,5 +15,5 @@ class Writer:
     writer: Optional[Writer] = field(default_factory=Writer)
     id: Optional[int] = None
     followup: Optional[bool] = None
-    has_error: Optional[bool] = None
-    transfer_type: Optional[TransferType] = field(default_factory=TransferType)
+    hasError: Optional[bool] = None
+    transferType: Optional[TransferType] = field(default_factory=TransferType)

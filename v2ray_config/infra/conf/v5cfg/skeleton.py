@@ -1,6 +1,7 @@
 from pydantic.dataclasses import dataclass, Field as field
 from typing import Optional
 
+import v2ray_config.app.dns
 from v2ray_config.infra.conf.cfgcommon.muxcfg.mux import MuxConfig
 from v2ray_config.infra.conf.cfgcommon.proxycfg.proxy import ProxyConfig
 from v2ray_config.infra.conf.cfgcommon.sniffer.sniffer import SniffingConfig
@@ -19,39 +20,43 @@ import v2ray_config.app.router.config_pb
 @dataclass(slots=True)
 class StreamConfig:
     transport: Optional[str] = None
-    transport_settings: Optional[dict] = field(default_factory=dict)
+    transportSettings: Optional[dict] = field(default_factory=dict)
     security: Optional[str] = None
-    security_settings: Optional[dict] = field(default_factory=dict)
-    socket_settings: Optional[SocketConfig] = field(default_factory=SocketConfig)
+    securitySettings: Optional[dict] = field(default_factory=dict)
+    socketSettings: Optional[SocketConfig] = field(default_factory=SocketConfig)
 
 
 @dataclass(slots=True)
 class InboundConfig:
     protocol: Optional[str] = None
-    port: Optional[int] = None
+    port: Optional[int | str] = None
     listen: Optional[str] = None
     settings: Optional[dict] = field(default_factory=dict)
     tag: Optional[str] = None
     sniffing: Optional[SniffingConfig] = field(default_factory=SniffingConfig)
-    stream_settings: Optional[StreamConfig] = field(default_factory=StreamConfig)
+    streamSettings: Optional[StreamConfig] = field(default_factory=StreamConfig)
 
 
 @dataclass(slots=True)
 class OutboundConfig:
     protocol: Optional[str] = None
-    send_through: Optional[str] = None
+    sendThrough: Optional[str] = None
     tag: Optional[str] = None
     settings: Optional[dict] = field(default_factory=dict)
-    stream_settings: Optional[StreamConfig] = field(default_factory=StreamConfig)
-    proxy_settings: Optional[ProxyConfig] = field(default_factory=ProxyConfig)
+    streamSettings: Optional[StreamConfig] = field(default_factory=StreamConfig)
+    proxySettings: Optional[ProxyConfig] = field(default_factory=ProxyConfig)
     mux: Optional[MuxConfig] = field(default_factory=MuxConfig)
-    domain_strategy: Optional[str] = None
+    domainStrategy: Optional[str] = None
 
 
 @dataclass(slots=True)
 class RootConfig:
-    log: Optional[LogConfig] = field(default_factory=LogConfig)
-    dns: Optional[DNSConfig] = field(default_factory=DNSConfig)
+    log: Optional[v2ray_config.app.log.config_pb.Config] = field(
+        default_factory=v2ray_config.app.log.config_pb.Config
+    )
+    dns: Optional[v2ray_config.app.dns.config_pb.Config] = field(
+        default_factory=v2ray_config.app.dns.config_pb.Config
+    )
     router: Optional[v2ray_config.app.router.config_pb.Config] = field(
         default_factory=v2ray_config.app.router.config_pb.Config
     )

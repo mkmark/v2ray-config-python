@@ -7,10 +7,10 @@ from typing import Optional
 
 @dataclass(slots=True)
 class GeoIPMatcher:
-    country_code: Optional[str] = None
-    reverse_match: Optional[bool] = None
-    ip_4: Optional[IPSet] = field(default_factory=IPSet)
-    ip_6: Optional[IPSet] = field(default_factory=IPSet)
+    countryCode: Optional[str] = None
+    reverseMatch: Optional[bool] = None
+    ip4: Optional[IPSet] = field(default_factory=IPSet)
+    ip6: Optional[IPSet] = field(default_factory=IPSet)
 
 
 @dataclass(slots=True)

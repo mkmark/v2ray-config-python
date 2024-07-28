@@ -19,8 +19,8 @@ class LeastLoadStrategy:
 @dataclass(slots=True)
 class node:
     tag: Optional[str] = None
-    count_all: Optional[int] = None
-    count_fail: Optional[int] = None
-    rtt_average: Optional[str] = None
-    rtt_deviation: Optional[str] = None
-    rtt_deviation_cost: Optional[str] = None
+    countAll: Optional[int] = None
+    countFail: Optional[int] = None
+    rTTAverage: Optional[str] = None
+    rTTDeviation: Optional[str] = None
+    rTTDeviationCost: Optional[str] = None

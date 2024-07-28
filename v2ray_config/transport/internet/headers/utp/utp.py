@@ -9,4 +9,4 @@ from typing import Optional
 class UTP:
     header: Optional[int] = None
     extension: Optional[int] = None
-    connection_id: Optional[int] = None
+    connectionID: Optional[int] = None

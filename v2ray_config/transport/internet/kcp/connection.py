@@ -16,8 +16,8 @@ class RoundTripInfo(RWMutex):
     variation: Optional[int] = None
     srtt: Optional[int] = None
     rto: Optional[int] = None
-    min_rtt: Optional[int] = None
-    updated_timestamp: Optional[int] = None
+    minRtt: Optional[int] = None
+    updatedTimestamp: Optional[int] = None
 
 
 @dataclass(slots=True)
@@ -28,8 +28,8 @@ class Updater:
 
 @dataclass(slots=True)
 class ConnMetadata:
-    local_addr: Optional[Addr] = field(default_factory=Addr)
-    remote_addr: Optional[Addr] = field(default_factory=Addr)
+    localAddr: Optional[Addr] = field(default_factory=Addr)
+    remoteAddr: Optional[Addr] = field(default_factory=Addr)
     conversation: Optional[int] = None
 
 
@@ -40,16 +40,16 @@ class Connection:
     rd: Optional[Time] = field(default_factory=Time)
     wd: Optional[Time] = field(default_factory=Time)
     since: Optional[int] = None
-    data_input: Optional[Notifier] = field(default_factory=Notifier)
-    data_output: Optional[Notifier] = field(default_factory=Notifier)
+    dataInput: Optional[Notifier] = field(default_factory=Notifier)
+    dataOutput: Optional[Notifier] = field(default_factory=Notifier)
     config: Optional[Config] = field(default_factory=Config)
-    state_begin_time: Optional[int] = None
-    last_incoming_time: Optional[int] = None
-    last_ping_time: Optional[int] = None
+    stateBeginTime: Optional[int] = None
+    lastIncomingTime: Optional[int] = None
+    lastPingTime: Optional[int] = None
     mss: Optional[int] = None
-    round_trip: Optional[RoundTripInfo] = field(default_factory=RoundTripInfo)
-    receiving_worker: Optional[ReceivingWorker] = field(default_factory=ReceivingWorker)
-    sending_worker: Optional[SendingWorker] = field(default_factory=SendingWorker)
+    roundTrip: Optional[RoundTripInfo] = field(default_factory=RoundTripInfo)
+    receivingWorker: Optional[ReceivingWorker] = field(default_factory=ReceivingWorker)
+    sendingWorker: Optional[SendingWorker] = field(default_factory=SendingWorker)
     output: Optional[SegmentWriter] = field(default_factory=SegmentWriter)
-    data_updater: Optional[Updater] = field(default_factory=Updater)
-    ping_updater: Optional[Updater] = field(default_factory=Updater)
+    dataUpdater: Optional[Updater] = field(default_factory=Updater)
+    pingUpdater: Optional[Updater] = field(default_factory=Updater)

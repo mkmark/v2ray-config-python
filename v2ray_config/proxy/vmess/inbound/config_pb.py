@@ -16,12 +16,12 @@ class DefaultConfig:
     level: Optional[int] = None
 
 
-# @dataclass(slots=True)
-# class Config:
-#     user: Optional[list[User]] = field(default_factory=list[User])
-#     default: Optional[DefaultConfig] = field(default_factory=DefaultConfig)
-#     detour: Optional[DetourConfig] = field(default_factory=DetourConfig)
-#     secure_encryption_only: Optional[bool] = None
+@dataclass(slots=True)
+class Config:
+    user: Optional[list[User]] = field(default_factory=list[User])
+    default: Optional[DefaultConfig] = field(default_factory=DefaultConfig)
+    detour: Optional[DetourConfig] = field(default_factory=DetourConfig)
+    secure_encryption_only: Optional[bool] = None
 
 
 @dataclass(slots=True)
