@@ -1,11 +1,11 @@
 # v2ray-config-python
 
-python dataclass definition of v2ray config with serialization/deserialization, following pep8 compliance
+python dataclass definition of v2ray/xray config with serialization/deserialization, following pep8 compliance
 
-- NOT complete, and will not be complete due to lack of necessity
+- NOT complete, and will not be complete due to lack motivation for now
 - NO docs, the project is a direct dirty translation of the original go types. If you wonder where to look for certain config settings, search/read the go code.
-- half automatic half manually generated
-- support both v4 and v5
+- half automatic half manually generated (much better than manual typing, same hard to maintain in the long term)
+- support v2ray v4 and v5, xray
 - reveal lots of hidden stuff not recorded in official document...
 
 last generated on 20240705

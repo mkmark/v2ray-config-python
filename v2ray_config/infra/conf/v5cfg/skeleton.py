@@ -6,8 +6,6 @@ from v2ray_config.infra.conf.cfgcommon.muxcfg.mux import MuxConfig
 from v2ray_config.infra.conf.cfgcommon.proxycfg.proxy import ProxyConfig
 from v2ray_config.infra.conf.cfgcommon.sniffer.sniffer import SniffingConfig
 from v2ray_config.infra.conf.cfgcommon.socketcfg.socket import SocketConfig
-from v2ray_config.infra.conf.synthetic.dns.dns import DNSConfig
-from v2ray_config.infra.conf.synthetic.log.log import LogConfig
 import v2ray_config.app.router.config_pb
 
 # import v2ray_config.infra.conf.cfgcommon as cfgcommon

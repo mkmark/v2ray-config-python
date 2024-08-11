@@ -31,7 +31,9 @@ class Config:
     next_protocol: Optional[list[str]] = field(default_factory=list[str])
     enable_session_resumption: Optional[bool] = None
     disable_system_root: Optional[bool] = None
-    pinned_peer_certificate_chain_sha256: Optional[list[list[int]]] = field(default_factory=list[list[int]])
+    pinned_peer_certificate_chain_sha256: Optional[list[str]] = field(
+        default_factory=list[str]
+    )
     verify_client_certificate: Optional[bool] = None
     min_version: Optional[Config_TLSVersion] = field(default_factory=Config_TLSVersion)
     max_version: Optional[Config_TLSVersion] = field(default_factory=Config_TLSVersion)

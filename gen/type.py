@@ -45,8 +45,8 @@ def extract_go_simple_types(go_code) -> list[tuple[str, str]]:
 
 
 # Function to extract Go type definitions
-def extract_go_imports(go_code) -> list[str]:
-    import_pattern = re.compile(r"\"github\.com\/v2fly\/v2ray-core\/v5\/([^\"]*)\"")
+def extract_go_imports(project, go_code) -> list[str]:
+    import_pattern = project["import_pattern"]
     imports = import_pattern.findall(go_code)
     return imports
 
@@ -66,8 +66,8 @@ go_field_name_to_ignore = [
 
 
 # Function to convert Go types to Python classes using dataclass
-def go2py(go_code: str):
-    go_imports = extract_go_imports(go_code)
+def go2py(project, go_code: str):
+    go_imports = extract_go_imports(project, go_code)
     go_simple_types = extract_go_simple_types(go_code)
     go_struct_types = extract_go_struct_types(go_code)
 
@@ -87,7 +87,8 @@ def go2py(go_code: str):
         # if py_import_from:
         #     py_import_from = "." + py_import_from
         py_import_as = py_import_split[-1]
-        py_import_lines.append(f"# import v2ray_config.{py_import} as {py_import_as}\n")
+        base_dir = project["base_dir"]
+        py_import_lines.append(f"# import {base_dir}.{py_import} as {py_import_as}\n")
 
     if len(py_import_lines):
         py_file_lines.append("\n")
@@ -154,7 +155,7 @@ def go2py(go_code: str):
             if go_field_name in go_field_name_to_ignore:
                 continue
 
-            if go_field_name is not None:
+            if go_field_name is not None and len(go_field_name):
                 py_field_name = go_field_name[0].lower() + go_field_name[1:]
                 py_field_name = escape_python_preserved_keyword(py_field_name)
                 go_field_type = go_field_elements[1]
@@ -239,6 +240,8 @@ def go2py_field_type(go_field_type: str):
         "net.Port": "int",
         "PacketAddrType": "str",
         "IPOrDomain": "str",
+        # xray
+        "TypedMessage": "dict",
     }
     py_field_type = type_mapping.get(go_field_type, go_field_type)
     return py_field_type

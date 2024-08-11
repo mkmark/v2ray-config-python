@@ -1,0 +1,88 @@
+from pydantic.dataclasses import dataclass, Field as field
+from typing import Optional
+
+# import xray_config.app.proxyman as proxyman
+# import xray_config.common as common
+# import xray_config.common.buf as buf
+# import xray_config.common.ctx as ctx
+# import xray_config.common.errors as errors
+# import xray_config.common.net as net
+# import xray_config.common.serial as serial
+# import xray_config.common.session as session
+# import xray_config.common.signal.done as done
+# import xray_config.common.task as task
+# import xray_config.features.routing as routing
+# import xray_config.features.stats as stats
+# import xray_config.proxy as proxy
+# import xray_config.transport.internet as internet
+# import xray_config.transport.internet.stat as stat
+# import xray_config.transport.internet.tcp as tcp
+# import xray_config.transport.internet.udp as udp
+# import xray_config.transport.pipe as pipe
+
+
+@dataclass(slots=True)
+class tcpWorker:
+    address: Optional[str] = None
+    port: Optional[int] = None
+    proxy: Optional[Inbound] = field(default_factory=Inbound)
+    stream: Optional[MemoryStreamConfig] = field(default_factory=MemoryStreamConfig)
+    recvOrigDest: Optional[bool] = None
+    tag: Optional[str] = None
+    dispatcher: Optional[Dispatcher] = field(default_factory=Dispatcher)
+    sniffingConfig: Optional[SniffingConfig] = field(default_factory=SniffingConfig)
+    uplinkCounter: Optional[Counter] = field(default_factory=Counter)
+    downlinkCounter: Optional[Counter] = field(default_factory=Counter)
+    hub: Optional[Listener] = field(default_factory=Listener)
+    ctx: Optional[Context] = field(default_factory=Context)
+
+
+@dataclass(slots=True)
+class udpConn:
+    lastActivityTime: Optional[int] = None
+    reader: Optional[Reader] = field(default_factory=Reader)
+    writer: Optional[Writer] = field(default_factory=Writer)
+    remote: Optional[Addr] = field(default_factory=Addr)
+    local: Optional[Addr] = field(default_factory=Addr)
+    done: Optional[Instance] = field(default_factory=Instance)
+    uplink: Optional[Counter] = field(default_factory=Counter)
+    downlink: Optional[Counter] = field(default_factory=Counter)
+    inactive: Optional[bool] = None
+
+
+@dataclass(slots=True)
+class connID:
+    src: Optional[Destination] = field(default_factory=Destination)
+    dest: Optional[Destination] = field(default_factory=Destination)
+
+
+@dataclass(slots=True)
+class udpWorker(RWMutex):
+    proxy: Optional[Inbound] = field(default_factory=Inbound)
+    hub: Optional[Hub] = field(default_factory=Hub)
+    address: Optional[str] = None
+    port: Optional[int] = None
+    tag: Optional[str] = None
+    stream: Optional[MemoryStreamConfig] = field(default_factory=MemoryStreamConfig)
+    dispatcher: Optional[Dispatcher] = field(default_factory=Dispatcher)
+    sniffingConfig: Optional[SniffingConfig] = field(default_factory=SniffingConfig)
+    uplinkCounter: Optional[Counter] = field(default_factory=Counter)
+    downlinkCounter: Optional[Counter] = field(default_factory=Counter)
+    checker: Optional[Periodic] = field(default_factory=Periodic)
+    activeConn: Optional[dict[connID, udpConn]] = field(default_factory=dict[connID, udpConn])
+    ctx: Optional[Context] = field(default_factory=Context)
+    cone: Optional[bool] = None
+
+
+@dataclass(slots=True)
+class dsWorker:
+    address: Optional[str] = None
+    proxy: Optional[Inbound] = field(default_factory=Inbound)
+    stream: Optional[MemoryStreamConfig] = field(default_factory=MemoryStreamConfig)
+    tag: Optional[str] = None
+    dispatcher: Optional[Dispatcher] = field(default_factory=Dispatcher)
+    sniffingConfig: Optional[SniffingConfig] = field(default_factory=SniffingConfig)
+    uplinkCounter: Optional[Counter] = field(default_factory=Counter)
+    downlinkCounter: Optional[Counter] = field(default_factory=Counter)
+    hub: Optional[Listener] = field(default_factory=Listener)
+    ctx: Optional[Context] = field(default_factory=Context)
