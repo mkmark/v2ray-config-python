@@ -57,7 +57,7 @@ class SimplifiedNameServer_OriginalRule:
 
 @dataclass(slots=True)
 class NameServer:
-    address: Optional[Endpoint] = field(default_factory=Endpoint)
+    address: Optional[Endpoint | str] = None
     client_ip: Optional[list[int]] = field(default_factory=list[int])
     tag: Optional[str] = None
     prioritized_domain: Optional[list[NameServer_PriorityDomain]] = field(
@@ -78,9 +78,9 @@ class NameServer:
 
 @dataclass(slots=True)
 class HostMapping:
-    type: Optional[DomainMatchingType] = field(default_factory=DomainMatchingType)
+    type: Optional[str] = None
     domain: Optional[str] = None
-    ip: Optional[list[list[int]]] = field(default_factory=list[list[int]])
+    ip: Optional[list[str]] = field(default_factory=list[str])
     proxied_domain: Optional[str] = None
 
 

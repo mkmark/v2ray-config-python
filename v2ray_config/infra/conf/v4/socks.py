@@ -21,6 +21,7 @@ class SocksServerConfig:
     ip: Optional[str] = None
     timeout: Optional[int] = None
     userLevel: Optional[int] = None
+    packetEncoding: Optional[str] = None
 
 
 @dataclass(slots=True)
@@ -32,5 +33,7 @@ class SocksRemoteConfig:
 
 @dataclass(slots=True)
 class SocksClientConfig:
-    servers: Optional[list[SocksRemoteConfig]] = field(default_factory=list[SocksRemoteConfig])
+    servers: Optional[list[SocksRemoteConfig]] = field(
+        default_factory=list[SocksRemoteConfig]
+    )
     version: Optional[str] = None

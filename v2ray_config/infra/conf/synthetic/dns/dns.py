@@ -32,18 +32,12 @@ class NameServerConfig:
 
 
 @dataclass(slots=True)
-class HostAddress:
-    addr: Optional[str] = None
-    addrs: Optional[list[str]] = field(default_factory=list[str])
-
-
-@dataclass(slots=True)
 class DNSConfig:
-    servers: Optional[list[NameServerConfig]] = field(
-        default_factory=list[NameServerConfig]
+    servers: Optional[list[NameServerConfig | str]] = field(
+        default_factory=list[NameServerConfig | str]
     )
-    hosts: Optional[dict[str, HostAddress]] = field(
-        default_factory=dict[str, HostAddress]
+    hosts: Optional[dict[str, str | list[str]]] = field(
+        default_factory=dict[str, str | list[str]]
     )
     fakedns: Optional[FakeDNSConfig] = field(default_factory=FakeDNSConfig)
     domainMatcher: Optional[str] = None

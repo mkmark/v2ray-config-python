@@ -16,6 +16,7 @@ class ShadowsocksServerConfig:
     email: Optional[str] = None
     network: Optional[list[str]] = field(default_factory=list[str])
     ivCheck: Optional[bool] = None
+    packetEncoding: Optional[str] = None
 
 
 @dataclass(slots=True)
@@ -32,4 +33,6 @@ class ShadowsocksServerTarget:
 
 @dataclass(slots=True)
 class ShadowsocksClientConfig:
-    servers: Optional[list[ShadowsocksServerTarget]] = field(default_factory=list[ShadowsocksServerTarget])
+    servers: Optional[list[ShadowsocksServerTarget]] = field(
+        default_factory=list[ShadowsocksServerTarget]
+    )

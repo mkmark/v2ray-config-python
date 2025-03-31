@@ -19,7 +19,9 @@ class TrojanServerTarget:
 
 @dataclass(slots=True)
 class TrojanClientConfig:
-    servers: Optional[list[TrojanServerTarget]] = field(default_factory=list[TrojanServerTarget])
+    servers: Optional[list[TrojanServerTarget]] = field(
+        default_factory=list[TrojanServerTarget]
+    )
 
 
 @dataclass(slots=True)
@@ -40,6 +42,11 @@ class TrojanUserConfig:
 
 @dataclass(slots=True)
 class TrojanServerConfig:
-    clients: Optional[list[TrojanUserConfig]] = field(default_factory=list[TrojanUserConfig])
+    clients: Optional[list[TrojanUserConfig]] = field(
+        default_factory=list[TrojanUserConfig]
+    )
     fallback: Optional[dict] = field(default_factory=dict)
-    fallbacks: Optional[list[TrojanInboundFallback]] = field(default_factory=list[TrojanInboundFallback])
+    fallbacks: Optional[list[TrojanInboundFallback]] = field(
+        default_factory=list[TrojanInboundFallback]
+    )
+    packetEncoding: Optional[str] = None
